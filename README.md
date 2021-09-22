@@ -59,7 +59,7 @@ APM, ARJ, CHM, CPIO, CramFS, DEB, DMG, FAT,
 HFS, LZH, LZMA, LZMA2, MBR, MSI, MSLZ, NSIS, 
 NTFS, RPM, SquashFS, UDF, VHD, XAR, Z.
 ```
-#Bagaimana cara Deploy?
+# Bagaimana cara Deploy?
 Klik Dibawah untuk memulai Deploy
 <p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
 Jangan lupa tambahkan token.pickle dan cridential.json sebelum deploy👻😅

@@ -35,7 +35,7 @@ class AriaDownloadHelper(DownloadHelper):
                 if smsg:
                     aria2.remove([download])
                     dl.getListener().onDownloadError(f'🤣File/Folder sudah tersedia di Drive.\n\n')
-                    sendMarkup("Berikut adalah hasil pencariannya:", dl.getListener().bot, dl.getListener().update, button)
+                    sendMarkup("👇Berikut adalah hasil pencariannya👇:", dl.getListener().bot, dl.getListener().update, button)
                     return
 
             if TORRENT_DIRECT_LIMIT is not None:

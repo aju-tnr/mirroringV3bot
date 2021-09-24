@@ -24,12 +24,12 @@ BRANCH_ = UPSTREAM_BRANCH
 
 @app.on_message(filters.command(BotCommands.UpdateCommand) & filters.user(OWNER_ID))
 async def update_it(client, message):
-    msg_ = await message.reply_text("`Updating Please Wait!`")
+    msg_ = await message.reply_text("`💬Mengupdate Sabar!`")
     try:
         repo = Repo()
     except GitCommandError:
         return await msg_.edit(
-            "**Invalid Git Command. Please Report This Bug To [Support Group](https://t.me/SlamMirrorSupport)**"
+            "**Perintah Git Tidak Valid. Silakan Laporkan Bug Ini Ke [Owner](https://t.me/OdierBambi)**"
         )
     except InvalidGitRepositoryError:
         repo = Repo.init()
@@ -79,4 +79,4 @@ async def update_it(client, message):
         except BaseException as error:
             await msg_.edit(f"**Updater Error** \nTraceBack : `{error}`")
             return repo.__del__()
-        await msg_.edit(f"`Updated Sucessfully! \n\nCheck your config with` `/{BotCommands.ConfigMenuCommand}`")
+        await msg_.edit(f"`Mengupdate Sukses! \n\nCheck your config with` `/{BotCommands.ConfigMenuCommand}`")

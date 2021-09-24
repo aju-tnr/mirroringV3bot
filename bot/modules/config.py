@@ -53,7 +53,7 @@ __header__='📕 **Page** **{}**\n\n'
 @app.on_message(filters.command(BotCommands.ConfigMenuCommand) & filters.user(OWNER_ID))
 async def config_menu(_, message):
     await message.reply(
-        f"**Hello {message.from_user.mention}**,\n\n**If you want to add or set Variable in Heroku use** `/setvar`\n\n**If you want to delete Variable in Heroku use `/delvar`**\n\n**WARNING! Very Recommended to do this command in private since it's contain bot info.**\n\n**Here's This is Slam-MirrorBot Current Configs**",
+        f"**Hello {message.from_user.mention}**,\n\n**Jika Anda ingin menambah atau mengatur Variabel di Heroku gunakan** `/setvar`\n\n** Jika Anda ingin menghapus Variabel di Heroku gunakan '/delvar`**\n\n**PERINGATAN!  Sangat disarankan untuk melakukan perintah ini secara pribadi karena berisi info bot.**\n\n**Inilah Konfigurasi Slam-MirrorBot Saat Ini**",
         reply_markup=types.InlineKeyboardMarkup(
             [[types.InlineKeyboardButton(f"{emoji.CROSS_MARK}", callback_data='docs_end'), types.InlineKeyboardButton(f"BOT CONFIG", callback_data='docs_1')]]
         )

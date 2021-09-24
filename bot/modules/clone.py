@@ -13,18 +13,18 @@ def cloneNode(update, context):
         link = args[1]
         gd = GoogleDriveHelper()
         if CLONE_LIMIT is not None or STOP_DUPLICATE_CLONE:
-            msg1 = sendMessage(f"Checking Your Link...", context.bot, update)
+            msg1 = sendMessage(f"🤖Memeriksa Tautan Anda...", context.bot, update)
             res, clonesize, name = gd.clonehelper(link)
             if res != "":
                deleteMessage(context.bot, msg1)
                sendMessage(res, context.bot, update)
                return
             if STOP_DUPLICATE_CLONE:
-                LOGGER.info(f"Checking File/Folder if already in Drive...")
+                LOGGER.info(f"😤File/Folder sudah tersedia di Drive...")
                 smsg, button = gd.drive_list(name)
                 if smsg:
                     deleteMessage(context.bot, msg1)
-                    msg3 = "File/Folder is already available in Drive.\nHere are the search results:"
+                    msg3 = "😤File/Folder sudah tersedia di Drive.\n😤Berikut adalah hasil pencariannya:"
                     sendMarkup(msg3, context.bot, update, button)
                     return
                 else:
@@ -50,7 +50,7 @@ def cloneNode(update, context):
                         return
                     else:
                         deleteMessage(context.bot, msg1)                
-        msg = sendMessage(f"Cloning: <code>{link}</code>", context.bot, update)
+        msg = sendMessage(f"🤖Mengklon: <code>{link}</code>", context.bot, update)
         result, button = gd.clone(link)
         deleteMessage(context.bot, msg)
         if button == "":
@@ -61,7 +61,7 @@ def cloneNode(update, context):
             else:
                 uname = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
             if uname is not None:
-                cc = f'\n\ncc: {uname}'
+                cc = f'\n\n<b>😊Berhasil di clone ni bos:</b> {uname} \n<b>😊Silahkan di download</b>'
             sendMarkup(result + cc, context.bot, update, button)
     else:
         sendMessage('Provide G-Drive Shareable Link to Clone.', context.bot, update)

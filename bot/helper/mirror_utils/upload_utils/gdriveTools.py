@@ -629,9 +629,9 @@ class GoogleDriveHelper:
             if self.num_of_path > 1:
                 self.edit_telegraph()
 
-            msg = f"<b>👇Menampilkan {len(response['files'])} Hasil dari <i>{fileName}</i></b>"
+            msg = f"<b>📚Menampilkan {len(response['files'])} Hasil dari <i>{fileName}</i></b>"
             buttons = button_build.ButtonMaker()   
-            buttons.buildbutton("👻Hasil", f"https://telegra.ph/{self.path[0]}")
+            buttons.buildbutton("🔥Hasil", f"https://telegra.ph/{self.path[0]}")
 
             return msg, InlineKeyboardMarkup(buttons.build_menu(1))
 

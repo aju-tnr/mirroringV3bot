@@ -62,6 +62,7 @@ NTFS, RPM, SquashFS, UDF, VHD, XAR, Z.
 # Bagaimana cara Deploy?
 Klik Dibawah untuk memulai Deploy👇
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/OdierBambi/mirroringV3bot)
+
 Jangan lupa tambahkan token.pickle dan ceredential.json sebelum deploy👻😅
 
 # Credits

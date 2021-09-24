@@ -60,7 +60,7 @@ HFS, LZH, LZMA, LZMA2, MBR, MSI, MSLZ, NSIS,
 NTFS, RPM, SquashFS, UDF, VHD, XAR, Z.
 ```
 # Bagaimana cara Deploy?
-Klik Dibawah untuk memulai Deploy
+Klik Dibawah untuk memulai Deploy👇
 <p><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
 Jangan lupa tambahkan token.pickle dan ceredential.json sebelum deploy👻😅
 
@@ -68,4 +68,4 @@ Jangan lupa tambahkan token.pickle dan ceredential.json sebelum deploy👻😅
 
 Thanks to:
 - [deepakcloudsoffical](https://github.com/deepakcloudsoffical) untuk repo asli
-Dan masih banyak lagi orang yang tidak disebutkan di sini
+Dan masih banyak lagi orang yang tidak disebutkan di sini😅

@@ -1,5 +1,5 @@
 # MirroringV3bot
-[![Slam](https://telegra.ph/file/e365f2037343745578a2c.jpg)](https://t.me/OdierBambi)
+[![Slam](https://telegra.ph/file/0b34665a6bafbe3050a34.jpg)](https://t.me/OdierBambi)
 
 
 **MirroringV3bot** adalah _ multiguna _ Telegram Bot yang ditulis dengan Python untuk mencerminkan file di Internet ke Google Drive kita tercinta..

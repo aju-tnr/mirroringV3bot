@@ -37,17 +37,17 @@ def stats(update, context):
     disk = psutil.disk_usage('/').percent
     stats = f'<b>╭──「⭕️ STATISTIK BOT ⭕️」</b>\n' \
             f'<b>│</b>\n' \
-            f'<b>├ 🤖Bot Uptime:</b> {currentTime}\n' \
+            f'<b>├ 🤖Bot Uptime: {currentTime}</b>\n' \
             f'<b>│</b>\n' \
-            f'<b>├ ⏰Start Time:</b> {current}\n' \
-            f'<b>├ 💾Total Disk Space:</b> {total}\n' \
-            f'<b>├ 📀Used:</b> {used}\n' \
-            f'<b>├ 💿Free:</b> {free}\n' \
-            f'<b>├ 🔼Upload:</b> {sent}\n' \
-            f'<b>├ 🔽Download:</b> {recv}\n' \
-            f'<b>├ 🖥️CPU:</b> {cpuUsage}%\n' \
-            f'<b>├ 🎮RAM:</b> {memory}%\n' \
-            f'<b>├ 💽DISK:</b> {disk}%\n' \
+            f'<b>├ ⏰Start Time: {current}</b>\n' \
+            f'<b>├ 💾Total Disk Space: {total}</b>\n' \
+            f'<b>├ 📀Used: {used}</b>\n' \
+            f'<b>├ 💿Free: {free}</b>\n' \
+            f'<b>├ 🔼Upload: {sent}</b>\n' \
+            f'<b>├ 🔽Download: {recv}</b>\n' \
+            f'<b>├ 🖥️CPU: {cpuUsage}%</b>\n' \
+            f'<b>├ 🎮RAM: {memory}%</b>\n' \
+            f'<b>├ 💽DISK: {disk}%</b>\n' \
             f'<b>│</b>\n' \
             f'<b>╰──「 🚸 @MirroringV3Bot 🚸 」</b>'
     update.effective_message.reply_photo(IMAGE_URL, stats, parse_mode=ParseMode.HTML)

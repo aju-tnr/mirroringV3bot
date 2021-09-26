@@ -116,7 +116,7 @@ def get_readable_message():
                     pass
             if download.status() == MirrorStatus.STATUS_DOWNLOADING:
                 msg += f"\n<b>Batalkan🚫:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
-            msg += "\n\n<b>Tunggu Ya😅</b>\n"
+            msg += "\n\n<b>Tunggu Ya😅</b>\n\n"
         return msg
 
 

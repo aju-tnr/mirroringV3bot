@@ -347,8 +347,8 @@ class GoogleDriveHelper:
             if meta.get("mimeType") == self.__G_DRIVE_DIR_MIME_TYPE:
                 dir_id = self.create_directory(meta.get('name'), parent_id)
                 result = self.cloneFolder(meta.get('name'), meta.get('name'), meta.get('id'), dir_id)
-                msg += f'<b>🗂️Filename: </b><code>{meta.get("name")}</code>\n<b>Size: </b><code>{get_readable_file_size(self.transferred_size)}</code>'
-                msg += f'\n<b>✏️Type: </b><code>Folder</code>'
+                msg += f'<b>🗂️NamaFile: </b><code>{meta.get("name")}</code>\n<b>Size: </b><code>{get_readable_file_size(self.transferred_size)}</code>'
+                msg += f'\n<b>✏️TipeFile: </b><code>Folder</code>'
                 msg += f'\n<b>🗂️SubFolders: </b><code>{self.total_folders}</code>'
                 msg += f'\n<b>🗂️Files: </b><code>{self.total_files}</code>'
                 durl = self.__G_DRIVE_DIR_BASE_DOWNLOAD_URL.format(dir_id)
@@ -387,8 +387,8 @@ class GoogleDriveHelper:
                 except:
                     typeee = 'File' 
                 try:
-                    msg += f'\n<b>🔰Size: </b><code>{get_readable_file_size(int(meta.get("size")))}</code>'
-                    msg += f'\n<b>🔰Type: </b><code>{typeee}</code>'
+                    msg += f'\n\n<b>🔰Ukuran: </b><code>{get_readable_file_size(int(meta.get("size")))}</code>'
+                    msg += f'\n\n<b>🔰TipeFile: </b><code>{typeee}</code>'
                     msg += f'\n<b>🗳Powerd by: @MirroringV3Bot</b>'
                 except TypeError:
                     pass
@@ -656,8 +656,8 @@ class GoogleDriveHelper:
             if drive_file['mimeType'] == self.__G_DRIVE_DIR_MIME_TYPE:
                 self.gDrive_directory(**drive_file)
                 msg += f'<b>🗂️NamaFile: </b><code>{name}</code>'
-                msg += f'\n<b>🔰Ukuran: </b><code>{get_readable_file_size(self.total_bytes)}</code>'
-                msg += f'\n<b>🔰Tipe: </b><code>Folder</code>'
+                msg += f'\n\n<b>🔰Ukuran: </b><code>{get_readable_file_size(self.total_bytes)}</code>'
+                msg += f'\n\n<b>🔰TipeFile: </b><code>Folder</code>'
                 msg += f'\n<b>🗂️SubFolders: </b><code>{self.total_folders}</code>'
                 msg += f'\n<b>🗂️Files: </b><code>{self.total_files}</code>'
                 msg += f'\n<b>🗳Powerd by: @MirroringV3Bot</b>'
@@ -670,8 +670,8 @@ class GoogleDriveHelper:
                 try:
                     self.total_files += 1
                     self.gDrive_file(**drive_file)
-                    msg += f'\n<b>🔰Size: </b><code>{get_readable_file_size(self.total_bytes)}</code>'
-                    msg += f'\n<b>🔰Type: </b><code>{typee}</code>'
+                    msg += f'\n\n<b>🔰Ukuran: </b><code>{get_readable_file_size(self.total_bytes)}</code>'
+                    msg += f'\n\n<b>🔰TipeFile: </b><code>{typee}</code>'
                     msg += f'\n<b>🗂️Files: </b><code>{self.total_files}</code>'
                     msg += f'\n<b>🗳Powerd by: @MirroringV3Bot</b>'
                 except TypeError:

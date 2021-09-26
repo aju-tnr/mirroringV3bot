@@ -100,14 +100,14 @@ def get_readable_message():
         msg = ""
         for download in list(download_dict.values()):
             msg += f"<b>🗂️NamaFile:</b> <code>{download.name()}</code>"
-            msg += f"\n\n<b>⏰Status:</b> <i>{download.status()}</i>"
+            msg += f"\n<b>⏰Status:</b> <i>{download.status()}</i>"
             if download.status() != MirrorStatus.STATUS_ARCHIVING and download.status() != MirrorStatus.STATUS_EXTRACTING:
                 msg += f"\n<code>{get_progress_bar_string(download)} {download.progress()}</code>"
                 if download.status() == MirrorStatus.STATUS_DOWNLOADING:
-                    msg += f"\n\n<b>💨TerDownload:</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
+                    msg += f"\n<b>💨TerDownload:</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
                 else:
-                    msg += f"\n\n<b>💨TerUpload:</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
-                msg += f"\n\n<b>⚡️Kecepatan:</b> {download.speed()}\n<b>⏰ETA:</b> {download.eta()} "
+                    msg += f"\n<b>💨TerUpload:</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
+                msg += f"\n<b>⚡️Kecepatan:</b> {download.speed()}\n<b>⏰ETA:</b> {download.eta()} "
                 # if hasattr(download, 'is_torrent'):
                 try:
                     msg += f"\n<b>🌾Seeders:</b> {download.aria_download().num_seeders}" \
@@ -116,7 +116,7 @@ def get_readable_message():
                     pass
             if download.status() == MirrorStatus.STATUS_DOWNLOADING:
                 msg += f"\n<b>Batalkan🚫:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
-            msg += "\n\n<b>Tunggu Ya😅</b>"
+            msg += "\n\n<b>Tunggu Ya😅</b>\n"
         return msg
 
 

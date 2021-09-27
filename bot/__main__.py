@@ -73,7 +73,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
 def repo(update, context):
     bot.send_message(update.message.chat_id,
     reply_to_message_id=update.message.message_id,
-    text="https://github.com/OdierBambi/mirroringV3bot", disable_web_page_preview=false)
+    text="https://github.com/OdierBambi/mirroringV3bot", disable_web_page_preview=True)
 
 
 def restart(update, context):

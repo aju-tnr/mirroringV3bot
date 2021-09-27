@@ -3,7 +3,6 @@ import re
 import math
 import requests
 import urllib.request as urllib
-from PIL import Image
 from html import escape
 from bs4 import BeautifulSoup as bs
 

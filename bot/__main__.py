@@ -70,6 +70,12 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMessage(f"Oops! not a Authorized user.", context.bot, update)
 
 
+def repo(update, context):
+    bot.send_message(update.message.chat_id,
+    reply_to_message_id=update.message.message_id,
+    text="https://github.com/OdierBambi/mirroringV3bot", disable_web_page_preview=false)
+
+
 def restart(update, context):
     restart_message = sendMessage("Memuat ulang, Sabar!", context.bot, update)
     # Save restart message object in order to reply to it after restarting
@@ -143,6 +149,8 @@ def bot_help(update, context):
 
 /{BotCommands.ShellCommand}: Run commands in Shell (Terminal).
 
+/{BotCommands.RepoCommand}: Get the bot repo.
+
 /weebhelp: Get help for anime, manga and character module.
 
 /stickerhelp: Get help for stickers module.
@@ -200,6 +208,8 @@ def bot_help(update, context):
 /{BotCommands.MediaInfoCommand}: Get detailed info about replied media (Only for Telegram file).
 
 /{BotCommands.ShellCommand}: Run commands in Shell (Terminal).
+
+/{BotCommands.RepoCommand}: Get the bot repo.
 
 /weebhelp: Get help for anime, manga and character module.
 

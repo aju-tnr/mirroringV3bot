@@ -143,6 +143,8 @@ def bot_help(update, context):
 
 /{BotCommands.ShellCommand}: Run commands in Shell (Terminal).
 
+/weebhelp: Get help for anime, manga and character module.
+
 /tshelp: Get help for Torrent search module.
 '''
 
@@ -196,6 +198,8 @@ def bot_help(update, context):
 /{BotCommands.MediaInfoCommand}: Get detailed info about replied media (Only for Telegram file).
 
 /{BotCommands.ShellCommand}: Run commands in Shell (Terminal).
+
+/weebhelp: Get help for anime, manga and character module.
 
 /tshelp: Get help for Torrent search module.
 '''

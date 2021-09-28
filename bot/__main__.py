@@ -215,8 +215,6 @@ def bot_help(update, context):
 
 /stickerhelp: Get help for stickers module.
 
-/pastehelp: paste ke nekobin.
-
 /tshelp: Get help for Torrent search module.
 '''
 

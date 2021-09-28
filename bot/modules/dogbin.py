@@ -114,10 +114,10 @@ def get_paste_stats(bot: Bot, update: Update, args: List[str]):
 
 def dogbinhelp(update, context):
     help_string = '''
- • `/paste`*:* create a paste or a shortened url using [dogbin](https://del.dog).
- • `/getpaste`*:* get the content of a paste or shortened url from [dogbin](https://del.dog).
- • `/pastestats`*:* get stats of a paste or shortened url from [dogbin](https://del.dog).
-"""
+ • `/paste`*:* create a paste or a shortened url using dogbin.
+ • `/getpaste`*:* get the content of a paste or shortened url from dogbin.
+ • `/pastestats`*:* get stats of a paste or shortened url from dogbin.
+ '''
 
 
 PASTE_HANDLER = CommandHandler("paste", paste)

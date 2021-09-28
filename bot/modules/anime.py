@@ -277,7 +277,7 @@ def weebhelp(update, context):
 ANIME_HANDLER = CommandHandler("anime", anime)
 CHARACTER_HANDLER = CommandHandler("char", character)
 MANGA_HANDLER = CommandHandler("manga", manga)
-UPCOMING_HANDLER = DisableAbleCommandHandler("upcoming", upcoming)
+UPCOMING_HANDLER = CommandHandler("upcoming", upcoming)
 WEEBHELP_HANDLER = CommandHandler("weebhelp", weebhelp)
 
 dispatcher.add_handler(ANIME_HANDLER)

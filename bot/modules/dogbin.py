@@ -121,11 +121,11 @@ def dogbinhelp(update, context):
 
 
 PASTE_HANDLER = CommandHandler("paste", paste, pass_args=True)
-GET_PASTE_HANDLER = CommandHandler("getpaste", get_paste_content, pass_args=True)
-PASTE_STATS_HANDLER = CommandHandler("pastestats", get_paste_stats, pass_args=True)
-DOGBIN_HELP_HANDLER = CommandHandler("dogbinhelp", dogbinhelp)
+GETPASTE_HANDLER = CommandHandler("getpaste", get_paste_content, pass_args=True)
+PASTESTATS_HANDLER = CommandHandler("pastestats", get_paste_stats, pass_args=True)
+DOGBINHELP_HANDLER = CommandHandler("dogbinhelp", dogbinhelp)
 
 dispatcher.add_handler(PASTE_HANDLER)
-dispatcher.add_handler(GET_PASTE_HANDLER)
-dispatcher.add_handler(PASTE_STATS_HANDLER)
-dispatcher.add_handler(DOGBIN_HELP_HANDLER)
+dispatcher.add_handler(GETPASTE_HANDLER)
+dispatcher.add_handler(PASTESTATS_HANDLER)
+dispatcher.add_handler(DOGBINHELP_HANDLER)

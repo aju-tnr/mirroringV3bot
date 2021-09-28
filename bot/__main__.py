@@ -155,6 +155,8 @@ def bot_help(update, context):
 
 /stickerhelp: Get help for stickers module.
 
+/paste: paste text to nekobin.
+
 /tshelp: Get help for Torrent search module.
 '''
 
@@ -214,6 +216,8 @@ def bot_help(update, context):
 /weebhelp: Get help for anime, manga and character module.
 
 /stickerhelp: Get help for stickers module.
+
+/paste: paste text to nekobin.
 
 /tshelp: Get help for Torrent search module.
 '''

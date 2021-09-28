@@ -1,6 +1,5 @@
 import requests
 from bot import dispatcher
-from bot.modules.import CommandHandler
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler
 

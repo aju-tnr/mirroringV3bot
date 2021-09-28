@@ -36,13 +36,6 @@ def paste(update: Update, context: CallbackContext):
 
 
 
-def pastehelp(update, context):
-    help_string = '''
-• `/nekopas`*:* mempaste ke nekobin
-'''
-
 PASTE_HANDLER = CommandHandler("paste", paste)
-PASTEHELP_HANDLER = CommandHandler("pastehelp", pastehelp)
 
 dispatcher.add_handler(PASTE_HANDLER)
-dispatcher.add_handler(PASTEHELP_HANDLER)

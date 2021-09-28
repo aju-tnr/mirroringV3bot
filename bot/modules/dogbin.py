@@ -120,9 +120,9 @@ def dogbinhelp(update, context):
  '''
 
 
-PASTE_HANDLER = CommandHandler("paste", paste)
-GET_PASTE_HANDLER = CommandHandler("getpaste", get_paste_content)
-PASTE_STATS_HANDLER = CommandHandler("pastestats", get_paste_stats)
+PASTE_HANDLER = CommandHandler("paste", paste, pass_args=True)
+GET_PASTE_HANDLER = CommandHandler("getpaste", get_paste_content, pass_args=True)
+PASTE_STATS_HANDLER = CommandHandler("pastestats", get_paste_stats, pass_args=True)
 DOGBINHELP_HANDLER = CommandHandler("dogbinhelp", dogbinhelp)
 
 dispatcher.add_handler(PASTE_HANDLER)

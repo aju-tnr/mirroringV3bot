@@ -38,8 +38,8 @@ def paste(update: Update, context: CallbackContext):
 
 def pastehelp(update, context):
     help_string = '''
-• `/Nekopas`*:* mempaste ke nekobin
-
+• `/nekopas`*:* mempaste ke nekobin
+'''
 
 PASTE_HANDLER = CommandHandler("paste", paste)
 PASTEHELP_HANDLER = CommandHandler("pastehelp", pastehelp)

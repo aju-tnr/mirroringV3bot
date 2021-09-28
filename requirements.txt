@@ -2,14 +2,11 @@ aiohttp
 aria2p
 appdirs
 beautifulsoup4
-emoji
 feedparser
 gitpython
 google-api-python-client
 google-auth-httplib2
 google-auth-oauthlib
-#googletrans
-google_trans_new
 heroku3
 html-telegraph-poster
 js2py
@@ -24,7 +21,7 @@ pybase64
 pyrogram
 python-dotenv
 python-magic
-python-telegram-bot==12.8
+python-telegram-bot
 pytz
 requests
 speedtest-cli

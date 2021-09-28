@@ -1,8 +1,7 @@
 import requests
 from bot import dispatcher
-from bot.modules.import CommandHandler
 from telegram import ParseMode, Update
-from telegram.ext import CallbackContext
+from telegram.ext import CallbackContext, CommandHandler
 
 
 def paste(update: Update, context: CallbackContext):

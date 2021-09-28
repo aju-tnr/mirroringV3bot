@@ -249,11 +249,27 @@ def manga(update: Update, _):
         else: update.effective_message.reply_text(msg, parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(buttons))
 
 
+def upcoming(update: Update, context: CallbackContext):
+    jikan = jikanpy.jikan.Jikan()
+    upcomin = jikan.top("anime", page=1, subtype="upcoming")
+
+    upcoming_list = [entry["title"] for entry in upcomin["top"]]
+    upcoming_message = ""
+
+    for entry_num in range(len(upcoming_list)):
+        if entry_num == 10:
+            break
+        upcoming_message += f"{entry_num + 1}. {upcoming_list[entry_num]}\n"
+
+    update.effective_message.reply_text(upcoming_message)
+
+
 def weebhelp(update, context):
     help_string = '''
 • `/anime`*:* Cari anime
 • `/char`*:* Cari character
 • `/manga`*:* Cari manga
+• `/upcoming`*:* Melihat daftar anime baru di musim mendatang.
 '''
     update.effective_message.reply_photo("https://telegra.ph/file/26ed787af14536750587d.jpg", help_string, parse_mode=ParseMode.MARKDOWN)
 
@@ -261,9 +277,11 @@ def weebhelp(update, context):
 ANIME_HANDLER = CommandHandler("anime", anime)
 CHARACTER_HANDLER = CommandHandler("char", character)
 MANGA_HANDLER = CommandHandler("manga", manga)
+UPCOMING_HANDLER = DisableAbleCommandHandler("upcoming", upcoming)
 WEEBHELP_HANDLER = CommandHandler("weebhelp", weebhelp)
 
 dispatcher.add_handler(ANIME_HANDLER)
 dispatcher.add_handler(CHARACTER_HANDLER)
 dispatcher.add_handler(MANGA_HANDLER)
+dispatcher.add_handler(UPCOMING_HANDLER)
 dispatcher.add_handler(WEEBHELP_HANDLER)

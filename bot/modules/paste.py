@@ -1,6 +1,6 @@
 import requests
 from bot import dispatcher
-from telegram import ParseMode, Update
+from telegram import ParseMode, Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import CallbackContext, CommandHandler
 
 

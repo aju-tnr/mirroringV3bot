@@ -105,6 +105,8 @@ def bot_help(update, context):
 
 /{BotCommands.UnzipMirrorCommand} [download_url][magnet_link]: Starts mirroring and if downloaded file is any archive, extracts it to Google Drive
 
+/{BotCommands.ZipMirrorCommand} [download_url][magnet_link]: Start mirroring and upload the archived (.zip) version of the download
+
 /{BotCommands.TarMirrorCommand} [download_url][magnet_link]: Start mirroring and upload the archived (.tar) version of the download
 
 /{BotCommands.CloneCommand}: Copy file/folder to Google Drive
@@ -120,6 +122,8 @@ def bot_help(update, context):
 /{BotCommands.CancelMirror}: Reply to the message by which the download was initiated and that download will be cancelled
 
 /{BotCommands.StatusCommand}: Shows a status of all the downloads
+
+/{BotCommands.LeechCommand}: [download_url][magnet_link]: Start leeching to Telegram
 
 /{BotCommands.ListCommand} [search term]: Searches the search term in the Google Drive, if found replies with the link
 
@@ -167,6 +171,8 @@ def bot_help(update, context):
 
 /{BotCommands.UnzipMirrorCommand} [download_url][magnet_link]: Starts mirroring and if downloaded file is any archive, extracts it to Google Drive
 
+/{BotCommands.ZipMirrorCommand} [download_url][magnet_link]: Start mirroring and upload the archived (.zip) version of the download
+
 /{BotCommands.TarMirrorCommand} [download_url][magnet_link]: Start mirroring and upload the archived (.tar) version of the download
 
 /{BotCommands.CloneCommand}: Copy file/folder to Google Drive
@@ -182,6 +188,8 @@ def bot_help(update, context):
 /{BotCommands.CancelMirror}: Reply to the message by which the download was initiated and that download will be cancelled
 
 /{BotCommands.StatusCommand}: Shows a status of all the downloads
+
+/{BotCommands.LeechCommand}: [download_url][magnet_link]: Start leeching to Telegram
 
 /{BotCommands.ListCommand} [search term]: Searches the search term in the Google Drive, if found replies with the link
 
@@ -232,6 +240,7 @@ botcmds = [
 BotCommand(f'{BotCommands.MirrorCommand}', 'Start Mirroring'),
 BotCommand(f'{BotCommands.TarMirrorCommand}','Upload tar (zipped) file'),
 BotCommand(f'{BotCommands.UnzipMirrorCommand}','Extract files'),
+BotCommand(f'{BotCommands.ZipMirrorCommand}','Upload tar (zipped) file'),
 BotCommand(f'{BotCommands.CloneCommand}','Copy file/folder to Drive'),
 BotCommand(f'{BotCommands.CountCommand}','Count file/folder of Drive link'),
 BotCommand(f'{BotCommands.WatchCommand}','Mirror YT-DL support link'),
@@ -241,6 +250,7 @@ BotCommand(f'{BotCommands.CancelAllCommand}','Cancel all tasks'),
 BotCommand(f'{BotCommands.DeleteCommand}','Delete file from Drive'),
 BotCommand(f'{BotCommands.ListCommand}',' [query] Searches files in Drive'),
 BotCommand(f'{BotCommands.StatusCommand}','Get Mirror Status message'),
+BotCommand(f'{BotCommands.StatusCommand}','Start leeching to Telegram'),
 BotCommand(f'{BotCommands.StatsCommand}','Bot Usage Stats'),
 BotCommand(f'{BotCommands.HelpCommand}','Get Detailed Help'),
 BotCommand(f'{BotCommands.MediaInfoCommand}','Get detailed info about replied media'),

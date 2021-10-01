@@ -1,7 +1,6 @@
 
 from pyrogram import Client, filters
 from bot import dispatcher
-from telegram.ext import CommandHandler
 
 import youtube_dl
 from youtube_search import YoutubeSearch
@@ -89,9 +88,4 @@ def a(client, message):
         os.remove(thumb_name)
     except Exception as e:
         print(e)
-
-
-MUSIC_HANDLER = CommandHandler("s", s)
-
-dispatcher.add_handler(MUSIC_HANDLER)
 

@@ -8,13 +8,12 @@ from youtube_search import YoutubeSearch
 import requests
 
 import os
-from config import Config
 
 bot = Client(
     'music',
-    bot_token = Config.BOT_TOKEN,
-    api_id = Config.API_ID,
-    api_hash = Config.API_HASH
+    bot_token = 1964838308:AAEnXOkh9qhjyhjaPp4XGhAg1D4Ly_iW58s,
+    api_id = 1224490,
+    api_hash = 692a022828c7470d13e517b856812afd
 )
 
 ## Extra Fns -------------------------------

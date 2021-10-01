@@ -1,6 +1,5 @@
 
 from pyrogram import Client, filters
-from bot import dispatcher
 
 import youtube_dl
 from youtube_search import YoutubeSearch

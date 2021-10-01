@@ -11,9 +11,9 @@ import os
 
 bot = Client(
     'music',
-    bot_token = 1964838308:AAEnXOkh9qhjyhjaPp4XGhAg1D4Ly_iW58s,
-    api_id = 1224490,
-    api_hash = 692a022828c7470d13e517b856812afd
+    bot_token = '1964838308:AAEnXOkh9qhjyhjaPp4XGhAg1D4Ly_iW58s',
+    api_id = '1224490',
+    api_hash = '692a022828c7470d13e517b856812afd'
 )
 
 ## Extra Fns -------------------------------

@@ -91,7 +91,7 @@ def a(client, message):
         print(e)
 
 
-MUSIC_HANDLER = CommandHandler("s", search)
+MUSIC_HANDLER = CommandHandler("s", s)
 
 dispatcher.add_handler(MUSIC_HANDLER)
 

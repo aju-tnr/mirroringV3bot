@@ -1,5 +1,5 @@
 import requests
-import json
+from json import JSONDecodeError
 from bot import dispatcher
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler

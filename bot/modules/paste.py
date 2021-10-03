@@ -1,11 +1,11 @@
 import requests
 
 from telegram import ParseMode, Update
-from telegram.ext import CallbackContext, CommandHandler
+from telegram.ext import CallbackContext, CommandHandler, run_async
 
 from bot import dispatcher
 
-
+@run_async 
 def paste(update: Update, context: CallbackContext):
     args = context.args
     message = update.effective_message

@@ -1,4 +1,5 @@
 import requests
+import json
 from bot import dispatcher
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler
@@ -11,8 +12,8 @@ def paste(update: Update, context: CallbackContext):
     if message.reply_to_message:
         data = message.reply_to_message.text
 
-    elif len(args) >= 0:
-        data = message.text.split(None, 0)[0]
+    elif len(args) >= 1:
+        data = message.text.split(None, 1)[1]
 
     else:
         message.reply_text("What am I supposed to do with this?")
@@ -35,4 +36,5 @@ def paste(update: Update, context: CallbackContext):
 
 
 PASTE_HANDLER = CommandHandler("paste", paste)
+
 dispatcher.add_handler(PASTE_HANDLER)

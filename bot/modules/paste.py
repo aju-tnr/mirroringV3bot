@@ -3,6 +3,8 @@ from json import JSONDecodeError
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler
 
+from tg_bot import dispatcher
+
 
 def paste(update: Update, context: CallbackContext):
     args = context.args
@@ -27,4 +29,5 @@ def paste(update: Update, context: CallbackContext):
     message.reply_text(reply_text, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
 
 
-PASTE_HANDLER = CommandHandler("paste", paste) 
+PASTE_HANDLER = CommandHandler("paste", paste, pass_args=True)
+dispatcher.add_handler(PASTE_HANDLER)

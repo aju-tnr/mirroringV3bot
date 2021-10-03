@@ -3,7 +3,7 @@ from json import JSONDecodeError
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler
 
-from tg_bot import dispatcher
+from bot import dispatcher
 
 
 def paste(update: Update, context: CallbackContext):

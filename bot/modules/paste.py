@@ -7,7 +7,6 @@ from bot import dispatcher
 
 @run_async 
 def paste(update: Update, context: CallbackContext):
-    args = context.args
     message = update.effective_message
 
     if message.reply_to_message:

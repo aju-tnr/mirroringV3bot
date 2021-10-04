@@ -1,10 +1,9 @@
 import random
 
 from telegram import Bot, Update
-from telegram.ext import run_async
+from telegram.ext import CommandHandler, run_async
 
 from bot import dispatcher
-from bot.modules.disable import DisableAbleCommandHandler
 
 reactions = [
     "( ͡° ͜ʖ ͡°)",
@@ -226,6 +225,6 @@ __help__ = """
  - /react: Reacts with a random reaction
 """
 
-REACT_HANDLER = DisableAbleCommandHandler("react", react)
+REACT_HANDLER = CommandHandler("react", react)
 
 dispatcher.add_handler(REACT_HANDLER)

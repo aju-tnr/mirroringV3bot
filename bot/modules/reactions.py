@@ -1,7 +1,7 @@
 import random
 
 from telegram import Bot, Update
-from telegram.ext import CommandHandler, run_async
+from telegram.ext import CommandHandler
 
 from bot import dispatcher
 
@@ -211,7 +211,6 @@ reactions = [
 ]
 
 
-Dispatcher.run_async
 def react(bot: Bot, update: Update):
     message = update.effective_message
     react = random.choice(reactions)

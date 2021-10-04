@@ -211,7 +211,7 @@ reactions = [
 ]
 
 
-@run_async
+run_async
 def react(bot: Bot, update: Update):
     message = update.effective_message
     react = random.choice(reactions)

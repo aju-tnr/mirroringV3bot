@@ -84,6 +84,7 @@ def funhelp(update, context):
  ❍ `/table`*:* Get flip/unflip :v
  ❍ `/rlg`*:* Join ears,nose,mouth and create an emo ;-;
  ❍ `/weebify <text>`*:* Returns a weebified text
+ ❍ `/textbulet <text>`*:* Returns a bulet text
  ❍ `/pat`*:* Pats a user, or get patted (^-^)
   - - - - - - - - - -
  ❍ *Games* 🎲 *:*

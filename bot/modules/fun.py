@@ -191,6 +191,7 @@ def funhelp(update, context):
  ❍ `/toss`*:* Tosses A coin
  ❍ `/roll`*:* Roll a dice & get you a number
 """
+    update.effective_message.reply_photo("https://telegra.ph/file/6b6d2675626aa90f67bce.jpg", help_string, parse_mode=ParseMode.MARKDOWN
 
 FUNHELP_HANDLER = CommandHandler("funhelp", funhelp)
 RUNS_HANDLER = CommandHandler("runs", runs)

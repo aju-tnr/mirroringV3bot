@@ -6,7 +6,6 @@ import youtube_dl
 from pyrogram import filters
 from bot import pgram
 from youtube_search import YoutubeSearch
-from bot.pyroerror import capture_err
 from telegram.ext import CommandHandler
 from bot import dispatcher
 

@@ -155,6 +155,8 @@ def bot_help(update, context):
 
 /funyhelp: Get fun help.
 
+/song: Get music.
+
 /stickerhelp: Get help for stickers module.
 
 /tshelp: Get help for Torrent search module.
@@ -216,6 +218,8 @@ def bot_help(update, context):
 /weebhelp: Get help for anime, manga and character module.
 
 /funyhelp: Get fun help.
+
+/song: Get music.
 
 /stickerhelp: Get help for stickers module.
 

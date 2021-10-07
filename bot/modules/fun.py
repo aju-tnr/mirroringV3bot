@@ -82,7 +82,6 @@ def funhelp(update, context):
  ❍ `/runs`*:* Reply a random string from an array of replies
  ❍ `/shrug`*:* Get shrug XD
  ❍ `/table`*:* Get flip/unflip :v
- ❍ `/music`*:* Get music from youtube
  ❍ `/rlg`*:* Join ears,nose,mouth and create an emo ;-;
  ❍ `/weebify <text>`*:* Returns a weebified text
  ❍ `/textbulet <text>`*:* Returns a bulet text

@@ -5,6 +5,7 @@ import requests
 
 from telegram import ParseMode, Update, ChatPermissions, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import CallbackContext, CommandHandler
+from telegram.utils.helpers import mention_html
 from telegram.error import BadRequest
 
 import bot.modules.fun_strings as fun_strings
@@ -193,7 +194,6 @@ def funhelp(update, context):
 """
     update.effective_message.reply_photo("https://telegra.ph/file/6b6d2675626aa90f67bce.jpg", help_string, parse_mode=ParseMode.MARKDOWN
 
-FUNHELP_HANDLER = CommandHandler("funhelp", funhelp)
 RUNS_HANDLER = CommandHandler("runs", runs)
 TRUTH_HANDLER = CommandHandler("truth", truth)
 DARE_HANDLER = CommandHandler("dare", dare)
@@ -206,8 +206,9 @@ SHRUG_HANDLER = CommandHandler("shrug", shrug)
 RLG_HANDLER = CommandHandler("rlg", rlg)
 DECIDE_HANDLER = CommandHandler("decide", decide)
 TABLE_HANDLER = CommandHandler("table", table)
+FUNHELP_HANDLER = CommandHandler("funhelp", funhelp)
 
-dispatcher.add_handler(FUNHELP_HANDLER)
+
 dispatcher.add_handler(INSULT_HANDLER)
 dispatcher.add_handler(TRUTH_HANDLER)
 dispatcher.add_handler(DARE_HANDLER)
@@ -220,3 +221,4 @@ dispatcher.add_handler(SHRUG_HANDLER)
 dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
+dispatcher.add_handler(FUNHELP_HANDLER)

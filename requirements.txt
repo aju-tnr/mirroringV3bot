@@ -30,3 +30,4 @@ tenacity
 TgCrypto
 youtube_dl
 youtube_search
+youtube-search-python

@@ -4,7 +4,7 @@ import aiohttp
 import youtube_dl
 
 from pyrogram import filters
-from bot import pgram
+from bot import app
 from youtube_search import YoutubeSearch
 from telegram.ext import CommandHandler
 from bot import dispatcher
@@ -14,7 +14,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
 
 
-@pgram.on_message(filters.command(['song']))
+@app.on_message(filters.command(['song']))
 def song(client, message):
 
     user_id = message.from_user.id 

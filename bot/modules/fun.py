@@ -81,11 +81,11 @@ def funhelp(update, context):
     help_string = '''
  ❍ `/runs`*:* Reply a random string from an array of replies
  ❍ `/shrug`*:* Get shrug XD
+ ❍ `/song`*:* Get song from youtube
  ❍ `/table`*:* Get flip/unflip :v
  ❍ `/rlg`*:* Join ears,nose,mouth and create an emo ;-;
  ❍ `/weebify <text>`*:* Returns a weebified text
  ❍ `/textbulet <text>`*:* Returns a bulet text
- ❍ `/pat`*:* Pats a user, or get patted (^-^)
   - - - - - - - - - -
  ❍ *Games* 🎲 *:*
  ❍ `/truth`*:* Get ready to reveal a surprising truth🤫

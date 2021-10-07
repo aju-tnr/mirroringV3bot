@@ -153,7 +153,7 @@ def bot_help(update, context):
 
 /weebhelp: Get help for anime, manga and character module.
 
-/funhelp: Get fun help.
+/funyhelp: Get fun help.
 
 /animequotes: gives random anime quotes.
 
@@ -217,7 +217,7 @@ def bot_help(update, context):
 
 /weebhelp: Get help for anime, manga and character module.
 
-/funhelp: Get fun help.
+/funyhelp: Get fun help.
 
 /animequotes: gives random anime quotes.
 

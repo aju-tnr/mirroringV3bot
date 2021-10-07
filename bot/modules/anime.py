@@ -270,6 +270,7 @@ def weebhelp(update, context):
 • `/anime`*:* Cari anime
 • `/char`*:* Cari character
 • `/manga`*:* Cari manga
+• `/animequotes`*:* Cari quotes anime
 • `/upcoming`*:* Melihat daftar anime baru di musim mendatang.
 '''
     update.effective_message.reply_photo("https://telegra.ph/file/26ed787af14536750587d.jpg", help_string, parse_mode=ParseMode.MARKDOWN)

@@ -1,8 +1,9 @@
 import html
 import random
 import time
+import request
 
-from telegram import ParseMode, Update, ChatPermissions
+from telegram import ParseMode, Update, ChatPermissions, InlineKeyboardMarkup, InlineKeyboardButton, ParseMode
 from telegram.ext import CallbackContext, CommandHandler, run_async
 from telegram.error import BadRequest
 

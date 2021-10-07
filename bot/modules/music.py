@@ -1,15 +1,13 @@
 import html
 import time
 import datetime
-from telegram.ext import CommandHandler, run_async, Filters
 import requests, logging
 from telegram.ext import Updater, MessageHandler, Filters, CommandHandler
 from telegram import Message, Chat, Update, Bot, MessageEntity
-from tg_bot import dispatcher, OWNER_ID, SUDO_USERS
+from bot import dispatcher, OWNER_ID, SUDO_USERS
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 
 count = 0
-@run_async
 def music(bot: Bot, update: Update, args):
 	message = update.effective_message
 	global count

@@ -206,7 +206,7 @@ SHRUG_HANDLER = CommandHandler("shrug", shrug)
 RLG_HANDLER = CommandHandler("rlg", rlg)
 DECIDE_HANDLER = CommandHandler("decide", decide)
 TABLE_HANDLER = CommandHandler("table", table)
-FUNHELP_HANDLER = CommandHandler("funhelp", funhelp)
+FUNHELP_HANDLER = CommandHandler("funyhelp", funhelp)
 
 
 dispatcher.add_handler(INSULT_HANDLER)

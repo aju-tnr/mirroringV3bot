@@ -8,13 +8,13 @@ from bot import dispatcher, OWNER_ID, SUDO_USERS
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 
 count = 0
-def music(bot: Bot, update: Update, args):
+def music(bot: Bot, update: Update):
 	message = update.effective_message
 	global count
 
 	chatId = update.message.chat_id
     
-	video_id = ''.join(args)
+	video_id = ''.join
 
 	if video_id.find('youtu.be') != -1:
 		index = video_id.rfind('/') + 1
@@ -66,5 +66,5 @@ def music(bot: Bot, update: Update, args):
 				bot.send_message(chat_id=chatId, text='Something went wrong with the download..!\nPlease Report there @AnonymousD3061')
 
 
-MUSIC_HANDLER = CommandHandler('music', music, pass_args=True)
+MUSIC_HANDLER = CommandHandler('music', music)
 dispatcher.add_handler(MUSIC_HANDLER)

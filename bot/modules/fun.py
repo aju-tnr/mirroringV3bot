@@ -184,14 +184,14 @@ def funhelp(update, context):
  ❍ `/weebify <text>`*:* Returns a weebified text
  ❍ `/pat`*:* Pats a user, or get patted (^-^)
   - - - - - - - - - -
-❍ *Games* 🎲 *:*
+ ❍ *Games* 🎲 *:*
  ❍ `/truth`*:* Get ready to reveal a surprising truth🤫
  ❍ `/dare`*:* A dare is on way 😈
  ❍ `/insult`*:* Insult the person
  ❍ `/decide`*:* Randomly answers yes/no/maybe/idk
  ❍ `/toss`*:* Tosses A coin
  ❍ `/roll`*:* Roll a dice & get you a number
-'''
+ '''
     
 
 RUNS_HANDLER = CommandHandler("runs", runs)

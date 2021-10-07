@@ -18,7 +18,7 @@ from bot.helper.telegram_helper.message_utils import *
 from .helper.ext_utils.bot_utils import get_readable_file_size, get_readable_time
 from .helper.telegram_helper.filters import CustomFilters
 from bot.helper.telegram_helper import button_build
-from .modules import authorize, list, cancel_mirror, mirror_status, mirror, clone, watch, shell, eval, torrent_search, delete, speedtest, usage, mediainfo, count, config, updates, anime, stickers, fun, animequotes, text
+from .modules import authorize, list, cancel_mirror, mirror_status, mirror, clone, watch, shell, eval, torrent_search, delete, speedtest, usage, mediainfo, count, config, updates, anime, stickers, fun, animequotes, text, songs
 
 now=datetime.now(pytz.timezone('Asia/Jakarta'))
 
@@ -155,6 +155,8 @@ def bot_help(update, context):
 
 /funyhelp: Get fun help.
 
+/song: get song.
+
 /stickerhelp: Get help for stickers module.
 
 /tshelp: Get help for Torrent search module.
@@ -216,6 +218,8 @@ def bot_help(update, context):
 /weebhelp: Get help for anime, manga and character module.
 
 /funyhelp: Get fun help.
+
+/song: get song.
 
 /stickerhelp: Get help for stickers module.
 

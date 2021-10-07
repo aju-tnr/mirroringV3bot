@@ -173,7 +173,7 @@ def table(update: Update, context: CallbackContext):
 
 @run_async
 def funhelp(update, context):
-help_string = '''
+help_string = """
  ❍ `/runs`*:* Reply a random string from an array of replies
  ❍ `/slap`*:* Slap a user, or get slapped if not a reply 🌝
  ❍ `/shrug`*:* Get shrug XD
@@ -190,7 +190,7 @@ help_string = '''
  ❍ `/decide`*:* Randomly answers yes/no/maybe/idk
  ❍ `/toss`*:* Tosses A coin
  ❍ `/roll`*:* Roll a dice & get you a number
-'''
+"""
 
 FUNHELP_HANDLER = CommandHandler("funhelp", funhelp)
 RUNS_HANDLER = CommandHandler("runs", runs)

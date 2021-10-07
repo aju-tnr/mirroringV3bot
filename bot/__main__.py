@@ -18,7 +18,7 @@ from bot.helper.telegram_helper.message_utils import *
 from .helper.ext_utils.bot_utils import get_readable_file_size, get_readable_time
 from .helper.telegram_helper.filters import CustomFilters
 from bot.helper.telegram_helper import button_build
-from .modules import authorize, list, cancel_mirror, mirror_status, mirror, clone, watch, shell, eval, torrent_search, delete, speedtest, usage, mediainfo, count, config, updates, anime, stickers, fun, animequotes, text, music
+from .modules import authorize, list, cancel_mirror, mirror_status, mirror, clone, watch, shell, eval, torrent_search, delete, speedtest, usage, mediainfo, count, config, updates, anime, stickers, fun, animequotes, text
 
 now=datetime.now(pytz.timezone('Asia/Jakarta'))
 
@@ -35,19 +35,19 @@ def stats(update, context):
     cpuUsage = psutil.cpu_percent(interval=0.5)
     memory = psutil.virtual_memory().percent
     disk = psutil.disk_usage('/').percent
-    stats = f'<b>╭──「⭕️ STATISTIK BOT ⭕️」</b>\n' \
-            f'<b>│</b>\n' \
-            f'<b>├ 🤖Bot Uptime: {currentTime}</b>\n' \
-            f'<b>├ 💾Total Disk Space: {total}</b>\n' \
-            f'<b>├ 📀Used: {used}</b>\n' \
-            f'<b>├ 💿Free: {free}</b>\n' \
-            f'<b>├ 🔼Upload: {sent}</b>\n' \
-            f'<b>├ 🔽Download: {recv}</b>\n' \
-            f'<b>├ 🖥️CPU: {cpuUsage}%</b>\n' \
-            f'<b>├ 🎮RAM: {memory}%</b>\n' \
-            f'<b>├ 💽DISK: {disk}%</b>\n' \
-            f'<b>│</b>\n' \
-            f'<b>╰──「 🚸 @MirroringV3Bot 🚸 」</b>'
+    stats = f'<b>┏━━━━━━✦❘༻STATS BOT༺❘✦━━━━━━┓</b>\n' \
+            f'<b>┃</b>\n' \
+            f'<b>┃ 🤖Bot Uptime: {currentTime}</b>\n' \
+            f'<b>┃ 💾Total Disk Space: {total}</b>\n' \
+            f'<b>┃ 📀Used: {used}</b>\n' \
+            f'<b>┃ 💿Free: {free}</b>\n' \
+            f'<b>┃ 🔼Upload: {sent}</b>\n' \
+            f'<b>┃ 🔽Download: {recv}</b>\n' \
+            f'<b>┃ 🖥️CPU: {cpuUsage}%</b>\n' \
+            f'<b>┃ 🎮RAM: {memory}%</b>\n' \
+            f'<b>┃ 💽DISK: {disk}%</b>\n' \
+            f'<b>┃</b>\n' \
+            f'<b>┗━━━━━━✦❘༻@MirroringV3Bot༺❘✦━━━━━━┛</b>'
     update.effective_message.reply_photo(IMAGE_URL, stats, parse_mode=ParseMode.HTML)
 
 

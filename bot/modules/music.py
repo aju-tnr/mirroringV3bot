@@ -2,7 +2,7 @@ import html
 import time
 import datetime
 import requests, logging
-from telegram.ext import Updater, MessageHandler, Filters, CommandHandler
+from telegram.ext import Updater, MessageHandler, Filters, CommandHandler, CallbackContext
 from telegram import Message, Chat, Update, Bot, MessageEntity
 from bot import dispatcher, OWNER_ID, SUDO_USERS
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton

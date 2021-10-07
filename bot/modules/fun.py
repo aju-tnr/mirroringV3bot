@@ -193,6 +193,8 @@ def funhelp(update, context):
  ❍ `/roll`*:* Roll a dice & get you a number
  '''
     
+     update.effective_message.reply_photo("https://telegra.ph/file/6b6d2675626aa90f67bce.jpg", help_string, parse_mode=ParseMode.MARKDOWN)
+
 
 RUNS_HANDLER = CommandHandler("runs", runs)
 TRUTH_HANDLER = CommandHandler("truth", truth)

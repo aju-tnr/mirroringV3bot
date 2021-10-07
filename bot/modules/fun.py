@@ -1,7 +1,7 @@
 import html
 import random
 import time
-
+import requests
 
 from telegram import ParseMode, Update, ChatPermissions, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import CallbackContext, CommandHandler

@@ -61,7 +61,7 @@ def cloneNode(update, context):
             else:
                 uname = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
             if uname is not None:
-                cc = f'\n\n<b>🗣️Berhasil di clone ni bos:</b> {uname} \n<b>🗣️Silahkan di download</b>'
+                cc = f'\n\n<b>👥Di Request oleh ☞ </b> {uname} \n<b>🗣️Silahkan di download</b>'
             sendMarkup(result + cc, context.bot, update, button)
     else:
         sendMessage('Provide G-Drive Shareable Link to Clone.', context.bot, update)

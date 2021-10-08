@@ -10,7 +10,7 @@ from telegram.ext import (
     CallbackQueryHandler)
 
 info_btn = "More Information"
-otakudesu_btn = "Otakudesu ☠️"
+bakadame_btn = "Bakadame ☠️"
 doujindesu_btn = "Doujindesu 🏴‍☠️"
 ganime_btn = "Ganime ☠️"
 prequel_btn = "⬅️ Prequel"
@@ -29,8 +29,8 @@ def site_search(update: Update, context: CallbackContext, site: str):
         message.reply_text("Give something to search")
         return
 
-    if site == "otakudesu":
-        search_url = f"https://otakudesu.moe/?s={search_query}"
+    if site == "bakadame":
+        search_url = f"https://bakadame.com/?s={search_query}"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
         search_result = soup.find_all("h2", {'class': "post-title"})
@@ -38,7 +38,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
         if search_result:
             result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Otakudesu</code>: \n"
             for entry in search_result:
-                post_link = "https://otakudesu.moe/" + entry.a['href']
+                post_link = "https://bakadame.com/" + entry.a['href']
                 post_name = html.escape(entry.text)
                 result += f"• <a href='{post_link}'>{post_name}</a>\n"
         else:
@@ -77,8 +77,8 @@ def site_search(update: Update, context: CallbackContext, site: str):
             result, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
 
-def otakudesu(update: Update, context: CallbackContext):
-    site_search(update, context, "otakudesu")
+def bakadame(update: Update, context: CallbackContext):
+    site_search(update, context, "bakadame")
 
 
 def doujindesu(update: Update, context: CallbackContext):
@@ -86,8 +86,8 @@ def doujindesu(update: Update, context: CallbackContext):
     
     
     
-OTAKUDESU_SEARCH_HANDLER = CommandHandler("otakudesu", otakudesu)
+BAKADAME_SEARCH_HANDLER = CommandHandler("otakudesu", otakudesu)
 DOUJINDESU_SEARCH_HANDLER = CommandHandler("doujindesu", doujindesu)
 
-dispatcher.add_handler(OTAKUDESU_SEARCH_HANDLER)
+dispatcher.add_handler(BAKADAME_SEARCH_HANDLER)
 dispatcher.add_handler(DOUJINDESU_SEARCH_HANDLER)

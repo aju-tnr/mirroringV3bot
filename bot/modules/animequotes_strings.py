@@ -1,8 +1,8 @@
 QUOTES_IMG = (
-      "https://i.imgur.com/Iub4RYj.jpg", 
-      "https://i.imgur.com/uvNMdIl.jpg", 
-      "https://i.imgur.com/YOBOntg.jpg", 
-      "https://i.imgur.com/fFpO2ZQ.jpg", 
+      "https://telegra.ph/file/16c38a1f5a3e0d7e80fc5.jpg", 
+      "https://telegra.ph/file/8be84eaa4278a1a7ad2d0.jpg", 
+      "https://telegra.ph/file/ed6df5a769a9154acd817.jpg", 
+      "https://telegra.ph/file/f38f2029aa5879aded3be.jpg", 
       "https://i.imgur.com/f0xZceK.jpg", 
       "https://i.imgur.com/RlVcCip.jpg", 
       "https://i.imgur.com/CjpqLRF.jpg", 

@@ -277,6 +277,7 @@ def weebhelp(update, context):
 • `/poke`*:* mengirim gif poke
 • `/baka`*:* mengirim gif baka
 • `/bakadame`*:* Cari anime dari bakadame
+• `/kaizoku`*:* Cari anime dari kaizoku
 • `/doujindesu`*:* Cari komik++ dari doujindesu
 • `/nhentai`*:* mengirim manga dari nhentai
 • `/hentai`*:* mengirim foto hentai(contoh nhentai 205200)

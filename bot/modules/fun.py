@@ -77,7 +77,7 @@ def table(update: Update, context: CallbackContext):
     reply_text(random.choice(fun_strings.TABLE))
 
 
-def funyhelp(update, context):
+def funhelp(update, context):
     help_string = '''
  ❍ `/runs`*:* Reply a random string from an array of replies
  ❍ `/shrug`*:* Get shrug XD

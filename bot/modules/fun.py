@@ -77,11 +77,13 @@ def table(update: Update, context: CallbackContext):
     reply_text(random.choice(fun_strings.TABLE))
 
 
-def funhelp(update, context):
+def funyhelp(update, context):
     help_string = '''
  ❍ `/runs`*:* Reply a random string from an array of replies
  ❍ `/shrug`*:* Get shrug XD
  ❍ `/song`*:* Get song from youtube
+ ❍ `/telegraph`*:* Upload file/text to telegraph
+ ❍ `/t`*:* Translate text
  ❍ `/table`*:* Get flip/unflip :v
  ❍ `/rlg`*:* Join ears,nose,mouth and create an emo ;-;
  ❍ `/weebify <text>`*:* Returns a weebified text

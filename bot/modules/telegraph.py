@@ -4,7 +4,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 from telegraph import upload_file
 
-from bot import app, dispatcher
+from bot import app, dispatcher, telegraph
 from telegram.ext import CommandHandler
 
 @app.on_message(filters.command(['tgm']))

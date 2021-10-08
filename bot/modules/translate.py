@@ -95,7 +95,7 @@ def extrahelp(update, context):
     update.effective_message.reply_photo("https://telegra.ph/file/26ed787af14536750587d.jpg", help_string, parse_mode=ParseMode.MARKDOWN)
 
 
-EXTRAHELP_HANDLER= CommandHandler("extrahelp", extrahelp)
+EXTRAHELP_HANDLER = CommandHandler("extrahelp", extrahelp)
 TRANSLATE_HANDLER = CommandHandler(["tr", "tl"], totranslate)
 
 dispatcher.add_handler(TRANSLATE_HANDLER)

@@ -277,9 +277,9 @@ def weebhelp(update, context):
 • `/poke`*:* mengirim gif poke
 • `/baka`*:* mengirim gif baka
 • `/otakudesu`*:* Cari anime dari otakudesu
-• `/kayo`*:* Cari anime dari kayo
+• `/doujindesu`*:* Cari komik++ dari doujindesu
 • `/nhentai`*:* mengirim manga dari nhentai
-• `/hentai`*:* mengirim foto hentai
+• `/hentai`*:* mengirim foto hentai(contoh /nhentai 205200)
 • `/wallpaper`*:* mengirim wallpaper anime terbaik
 • `/animequotes`*:* Cari quotes anime
 • `/upcoming`*:* Melihat daftar anime baru di musim mendatang.

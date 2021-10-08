@@ -9,7 +9,7 @@ from telegram.ext import CommandHandler
 
 
 @app.on_message(filters.me & filters.command(["quotly"], Command))
-async def q_maker(_client, message):
+async def quotly(_client, message):
     if not message.reply_to_message:
         await message.edit("Reply to any users text message")
         return

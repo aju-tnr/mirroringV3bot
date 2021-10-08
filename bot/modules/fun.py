@@ -79,23 +79,26 @@ def table(update: Update, context: CallbackContext):
 
 def funhelp(update, context):
     help_string = '''
+ ❍ *Nggabut* 👾 *:*
  ❍ `/runs`*:* Reply a random string from an array of replies
  ❍ `/shrug`*:* Get shrug XD
- ❍ `/song`*:* Get song from youtube
- ❍ `/tgm`*:* Upload file to telegraph
- ❍ `/tgt`*:* Upload text to telegraph
  ❍ `/table`*:* Get flip/unflip :v
  ❍ `/rlg`*:* Join ears,nose,mouth and create an emo ;-;
  ❍ `/weebify <text>`*:* Returns a weebified text
  ❍ `/textbulet <text>`*:* Returns a bulet text
   - - - - - - - - - -
- ❍ *Games* 🎲 *:*
+ ❍ *DolananMbuh* 🎮 *:*
  ❍ `/truth`*:* Get ready to reveal a surprising truth🤫
  ❍ `/dare`*:* A dare is on way 😈
  ❍ `/insult`*:* Insult the person
  ❍ `/decide`*:* Randomly answers yes/no/maybe/idk
  ❍ `/toss`*:* Tosses A coin
  ❍ `/roll`*:* Roll a dice & get you a number
+  - - - - - - - - - -
+ ❍ *Extra* ☠️ *:*
+ ❍ `/song`*:* Get song from youtube
+ ❍ `/tgm`*:* Upload file to telegraph
+ ❍ `/tgt`*:* Upload text to telegraph
  '''
     update.effective_message.reply_photo("https://telegra.ph/file/6b6d2675626aa90f67bce.jpg", help_string, parse_mode=ParseMode.MARKDOWN)
 

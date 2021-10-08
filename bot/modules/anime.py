@@ -267,7 +267,7 @@ def upcoming(update: Update, context: CallbackContext):
 
 def weebhelp(update, context):
     help_string = '''
- ✢ *𝐀𝐧𝐢𝐦𝐞𝐇𝐞𝐥𝐩*:*
+✢ *𝐀𝐧𝐢𝐦𝐞𝐇𝐞𝐥𝐩*:*
 ➳ `/anime`*:* Cari anime
 ➳ `/char`*:* Cari character
 ➳ `/manga`*:* Cari manga

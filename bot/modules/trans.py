@@ -17,6 +17,6 @@ def translate(bot: Bot, update: Update):
   
   message.reply_to_message.reply_text(reply_text)
 
-translate_handler = DisableAbleCommandHandler("tl", translate)
+translate_handler = CommandHandler("tl", translate)
 
 dispatcher.add_handler(translate_handler)

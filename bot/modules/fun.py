@@ -80,7 +80,6 @@ def table(update: Update, context: CallbackContext):
 def funhelp(update, context):
     help_string = '''
  ❍ `/runs`*:* Reply a random string from an array of replies
- ❍ `/tl`*:* translate text
  ❍ `/shrug`*:* Get shrug XD
  ❍ `/song`*:* Get song from youtube
  ❍ `/table`*:* Get flip/unflip :v

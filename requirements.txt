@@ -31,6 +31,3 @@ TgCrypto
 youtube_dl
 youtube_search
 youtube-search-python
-#googletrans
-google_trans_new
-emoji

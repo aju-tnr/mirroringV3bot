@@ -33,7 +33,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
         search_url = f"https://otakudesu.moe/?s={search_query}"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
-        search_result = soup.find_all("h2", {'class': ""post-title"})
+        search_result = soup.find_all("h2", {'class': "post-title"})
 
         if search_result:
             result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Otakudesu</code>: \n"

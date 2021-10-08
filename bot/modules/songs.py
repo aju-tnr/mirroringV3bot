@@ -48,7 +48,7 @@ def song(client, message):
         )
         print(str(e))
         return
-    m.edit("`Mendownload Lagu... sabar ye😅 `")
+    m.edit("`Mendownload Lagu... sabar ya😅 `")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -62,7 +62,7 @@ def song(client, message):
         message.reply_audio(audio_file, caption=rep, thumb=thumb_name, parse_mode='md', title=title, duration=dur)
         m.delete()
     except Exception as e:
-        m.edit('An error Occured! \nReport at @TangentChats')
+        m.edit('An error Occured! \nReport at @OdierBambi')
         print(e)
 
     try:

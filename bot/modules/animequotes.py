@@ -3,7 +3,7 @@ import random
 import time
 
 from telegram import ParseMode, Update, ChatPermissions
-from telegram.ext import CallbackContext, CommandHandler, run_async
+from telegram.ext import CallbackContext, CommandHandler
 from telegram.error import BadRequest
 
 import bot.modules.animequotes_strings as animequotes_strings
@@ -11,7 +11,6 @@ import bot.modules.animequotes_strings as animequotes_strings
 from bot import dispatcher
 
 
-@run_async
 def animequotes(update: Update, context: CallbackContext):
     message = update.effective_message
     name = message.reply_to_message.from_user.first_name if message.reply_to_message else message.from_user.first_name

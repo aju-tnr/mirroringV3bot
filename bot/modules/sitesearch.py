@@ -86,7 +86,7 @@ def doujindesu(update: Update, context: CallbackContext):
     
     
     
-BAKADAME_SEARCH_HANDLER = CommandHandler("otakudesu", otakudesu)
+BAKADAME_SEARCH_HANDLER = CommandHandler("bakadame", bakadame)
 DOUJINDESU_SEARCH_HANDLER = CommandHandler("doujindesu", doujindesu)
 
 dispatcher.add_handler(BAKADAME_SEARCH_HANDLER)

@@ -10,7 +10,7 @@ from telegram.ext import (
     CallbackQueryHandler)
 
 info_btn = "More Information"
-bakadame_btn = "Bakadame ☠️"
+kaizoku_btn = "Kaizoku ☠️"
 doujindesu_btn = "Doujindesu 🏴‍☠️"
 ganime_btn = "Ganime ☠️"
 prequel_btn = "⬅️ Prequel"
@@ -29,21 +29,21 @@ def site_search(update: Update, context: CallbackContext, site: str):
         message.reply_text("Give something to search")
         return
 
-    if site == "bakadame":
-        search_url = f"https://bakadame.com/?s={search_query}"
+    if site == "kaizoku":
+        search_url = f"https://animekaizoku.com/?s={search_query}"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
         search_result = soup.find_all("h2", {'class': "post-title"})
 
         if search_result:
-            result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Bakadame</code>: \n"
+            result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>KaizokuAnime</code>: \n"
             for entry in search_result:
-                post_link = entry.a['href']
+                post_link = "https://animekaizoku.com/" + entry.a['href']
                 post_name = html.escape(entry.text)
                 result += f"• <a href='{post_link}'>{post_name}</a>\n"
         else:
             more_results = False
-            result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Bakadame</code>"
+            result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>KaizokuAnime</code>"
 
     elif site == "doujindesu":
         search_url = f"https://doujindesu.id/?s={search_query}"
@@ -56,6 +56,24 @@ def site_search(update: Update, context: CallbackContext, site: str):
 
             if entry.text.strip() == "Nothing Found":
                 result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>DoujinDesu</code>"
+                more_results = False
+                break
+
+            post_link = entry.a['href']
+            post_name = html.escape(entry.text.strip())
+            result += f"• <a href='{post_link}'>{post_name}</a>\n"
+
+    elif site == "bakadame":
+        search_url = f"https://bakadame.com/?s={search_query}"
+        html_text = requests.get(search_url).text
+        soup = bs4.BeautifulSoup(html_text, "html.parser")
+        search_result = soup.find_all("h2", {'class': "title"})
+
+        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Bakadame</code>: \n"
+        for entry in search_result:
+
+            if entry.text.strip() == "Nothing Found":
+                result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Bakadame</code>"
                 more_results = False
                 break
 
@@ -77,17 +95,24 @@ def site_search(update: Update, context: CallbackContext, site: str):
             result, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
 
-def bakadame(update: Update, context: CallbackContext):
-    site_search(update, context, "bakadame")
+def kaizoku(update: Update, context: CallbackContext):
+    site_search(update, context, "kaizoku")
 
 
 def doujindesu(update: Update, context: CallbackContext):
     site_search(update, context, "doujindesu")
-    
-    
-    
-BAKADAME_SEARCH_HANDLER = CommandHandler("bakadame", bakadame)
-DOUJINDESU_SEARCH_HANDLER = CommandHandler("doujindesu", doujindesu)
 
-dispatcher.add_handler(BAKADAME_SEARCH_HANDLER)
+
+def bakadame(update: Update, context: CallbackContext):
+    site_search(update, context, "bakadame")
+
+    
+    
+    
+KAIZOKU_SEARCH_HANDLER = CommandHandler("kaizoku", kaizoku)
+DOUJINDESU_SEARCH_HANDLER = CommandHandler("doujindesu", doujindesu)
+BAKADAME_SEARCH_HANDLER = CommandHandler("bakadame", bakadame)
+
+dispatcher.add_handler(KAIZOKU_SEARCH_HANDLER)
 dispatcher.add_handler(DOUJINDESU_SEARCH_HANDLER)
+dispatcher.add_handler(BAKADAME_SEARCH_HANDLER)

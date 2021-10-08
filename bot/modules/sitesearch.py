@@ -10,8 +10,8 @@ from telegram.ext import (
     CallbackQueryHandler)
 
 info_btn = "More Information"
-kaizoku_btn = "Otakudesu ☠️"
-kayo_btn = "Doujindesu 🏴‍☠️"
+otakudesu_btn = "Otakudesu ☠️"
+doujindesu_btn = "Doujindesu 🏴‍☠️"
 ganime_btn = "Ganime ☠️"
 prequel_btn = "⬅️ Prequel"
 sequel_btn = "Sequel ➡️"
@@ -33,7 +33,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
         search_url = f"https://otakudesu.moe/?s={search_query}"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
-        search_result = soup.find_all("h2", {'class': "title"})
+        search_result = soup.find_all("h2", {'class': ""post-title"})
 
         if search_result:
             result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Otakudesu</code>: \n"

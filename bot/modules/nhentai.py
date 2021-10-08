@@ -14,7 +14,7 @@ from bot import dispatcher
 
 
 @app.on_message(~filters.me & filters.command('nhentai', prefixes='/'), group=8)
-def nhentai(client, message):
+async def nhentai(client, message):
     query = message.text.split(" ")[1]
     title, tags, artist, total_pages, post_url, cover_image = nhentai_data(query)
     await message.reply_text(
@@ -31,8 +31,9 @@ def nhentai(client, message):
         )
     )
 
+
 @app.on_inline_query(filters.regex(r'^nhentai (\d+)$'))
-def inline_nhentai(client, inline_query):
+async def inline_nhentai(client, inline_query):
     query = int(inline_query.matches[0].group(1))
     n_title, tags, artist, total_pages, post_url, cover_image = nhentai_data(query)
     reply_message = f"<code>{n_title}</code>\n\n<b>Tags:</b>\n{tags}\n<b>Artists:</b>\n{artist}\n<b>Pages:</b>\n{total_pages}"

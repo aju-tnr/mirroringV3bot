@@ -8,7 +8,7 @@ from telegram.ext import CommandHandler
 
 
 
-@app.on_message(filters.command(['song']))
+@app.on_message(filters.command(['quotly']))
 async def quotly(_client, message):
     if not message.reply_to_message:
         await message.edit("Reply to any users text message")

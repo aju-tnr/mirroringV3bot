@@ -447,10 +447,11 @@ def makepack_internal(
 
 def stickhelp(update, context):
     help_string = '''
-• `/stickerid`*:* reply to a sticker to me to tell you its file ID.
-• `/getsticker`*:* reply to a sticker to me to upload its raw PNG file.
-• `/kang`*:* reply to a sticker to add it to your pack.
-• `/stickers`*:* Find stickers for given term on combot sticker catalogue
+ ✠ *𝐒𝐭𝐢𝐜𝐤𝐞𝐫𝐇𝐞𝐥𝐩*:* 
+✥ `/stickerid`*:* reply to a sticker to me to tell you its file ID.
+✥ `/getsticker`*:* reply to a sticker to me to upload its raw PNG file.
+✥ `/kang`*:* reply to a sticker to add it to your pack.
+✥ `/stickers`*:* Find stickers for given term on combot sticker catalogue
 '''
     update.effective_message.reply_photo("https://telegra.ph/file/6b6d2675626aa90f67bce.jpg", help_string, parse_mode=ParseMode.MARKDOWN)
 

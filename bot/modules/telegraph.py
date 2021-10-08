@@ -1,13 +1,14 @@
 import os
 
 from pyrogram import filters
+from pyrogram.types import Message
 from telegraph import upload_file
 
 from bot import app, dispatcher
 from telegram.ext import CommandHandler
 
-@app.on_message(filters.command(['telegraph']))
-async def telegraph(client, message):
+@app.on_message(filters.command(['tgm']))
+async def tgm(client, message):
     replied = message.reply_to_message
     if not replied:
         await message.reply("Reply to a supported media file")
@@ -45,8 +46,27 @@ async def telegraph(client, message):
         )
     finally:
         os.remove(download_location)
-        
-        
-TELEGRAPH_HANDLER = CommandHandler("telegraph", telegraph)
 
-dispatcher.add_handler(TELEGRAPH_HANDLER)
+@app.on_message(filters.command(['tgt']))
+async def tgt(_, message: Message):
+    reply = message.reply_to_message
+
+    if not reply or not reply.text:
+        return await message.reply("Reply to a text message")
+
+    if len(message.command) < 2:
+        return await message.reply("**Usage:**\n /telegraph [Page name]")
+
+    page_name = message.text.split(None, 1)[1]
+    page = telegraph.create_page(page_name, html_content=reply.text.html)
+    return await message.reply(
+        f"**Posted:** {page['url']}",
+        disable_web_page_preview=True,
+    )
+        
+        
+TGM_HANDLER = CommandHandler("tgm", tgm)
+TGT_HANDLER = CommandHandler("tgt", tgt)
+
+dispatcher.add_handler(TGM_HANDLER)
+dispatcher.add_handler(TGT_HANDLER)

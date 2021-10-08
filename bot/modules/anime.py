@@ -270,6 +270,13 @@ def weebhelp(update, context):
 • `/anime`*:* Cari anime
 • `/char`*:* Cari character
 • `/manga`*:* Cari manga
+• `/neko`*:* sends random neko image
+• `/tickle`*:* sends random tickle gif
+• `/feed`*:* sends random feed gif
+• `/poke`*:* sends random poke gif
+• `/baka`*:* sends random baka gif
+• `/waifu`*:* sends random waifu sticker/image
+• `/wallpaper`*:* sends random best anime wallpapers.
 • `/animequotes`*:* Cari quotes anime
 • `/upcoming`*:* Melihat daftar anime baru di musim mendatang.
 '''

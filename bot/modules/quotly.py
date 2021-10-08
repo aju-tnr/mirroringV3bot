@@ -3,12 +3,12 @@ from asyncio import sleep
 
 from pyrogram import filters
 
-from bot import app, dispatcher, Command
+from bot import app, dispatcher
 from telegram.ext import CommandHandler
 
 
 
-@app.on_message(filters.me & filters.command(["quotly"], Command))
+@app.on_message(filters.command(['song']))
 async def quotly(_client, message):
     if not message.reply_to_message:
         await message.edit("Reply to any users text message")

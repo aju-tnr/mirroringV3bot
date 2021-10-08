@@ -447,7 +447,7 @@ def makepack_internal(
 
 def stickhelp(update, context):
     help_string = '''
- ✠ *𝐒𝐭𝐢𝐜𝐤𝐞𝐫𝐇𝐞𝐥𝐩*:* 
+✠ *𝐒𝐭𝐢𝐜𝐤𝐞𝐫𝐇𝐞𝐥𝐩*🤖*:* 
 ✥ `/stickerid`*:* reply to a sticker to me to tell you its file ID.
 ✥ `/getsticker`*:* reply to a sticker to me to upload its raw PNG file.
 ✥ `/kang`*:* reply to a sticker to add it to your pack.

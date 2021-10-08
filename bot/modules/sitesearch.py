@@ -11,7 +11,7 @@ from telegram.ext import (
 
 info_btn = "More Information"
 kaizoku_btn = "Otakudesu ☠️"
-kayo_btn = "Kayo 🏴‍☠️"
+kayo_btn = "Doujindesu 🏴‍☠️"
 ganime_btn = "Ganime ☠️"
 prequel_btn = "⬅️ Prequel"
 sequel_btn = "Sequel ➡️"

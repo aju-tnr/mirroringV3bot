@@ -11,7 +11,7 @@ from datetime import timedelta
 from pyrogram import Client, filters
 from urllib.parse import quote as urlencode
 from telegram.ext import CommandHandler
-from bot import dispatcher
+from bot import dispatcher, tracemalloc
 
 
 def format_bytes(size):

@@ -271,6 +271,7 @@ def weebhelp(update, context):
 • `/char`*:* Cari character
 • `/manga`*:* Cari manga
 • `/neko`*:* mengirim foto neko
+• `/lewd`*:* mengirim foto anu
 • `/tickle`*:* mengirim gif tickle
 • `/feed`*:* mengirim gif feed
 • `/poke`*:* mengirim gif poke

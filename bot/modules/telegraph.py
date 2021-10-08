@@ -3,9 +3,8 @@ import os
 from pyrogram import filters
 from telegraph import upload_file
 
-from bot import pbot as app
+from bot import app, dispatcher
 from telegram.ext import CommandHandler
-from bot import dispatcher
 
 @app.on_message(filters.command(['telegraph']))
 async def telegraph(client, message):

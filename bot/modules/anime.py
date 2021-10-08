@@ -276,6 +276,8 @@ def weebhelp(update, context):
 • `/feed`*:* mengirim gif feed
 • `/poke`*:* mengirim gif poke
 • `/baka`*:* mengirim gif baka
+• `/otakudesu`*:* Cari anime dari otakudesu
+• `/kayo`*:* Cari anime dari kayo
 • `/nhentai`*:* mengirim manga dari nhentai
 • `/hentai`*:* mengirim foto hentai
 • `/wallpaper`*:* mengirim wallpaper anime terbaik

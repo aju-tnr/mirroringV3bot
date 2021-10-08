@@ -46,9 +46,9 @@ def poke(update, context):
     msg.reply_video(nekos.img(target))
     
     
-def waifu(update, context):
+def hentai(update, context):
     msg = update.effective_message
-    target = "waifu"
+    target = "hentai"
     msg.reply_photo(nekos.img(target))
     
     
@@ -64,7 +64,7 @@ WALLPAPER_HANDLER = CommandHandler("wallpaper", wallpaper)
 TICKLE_HANDLER = CommandHandler("tickle", tickle)
 FEED_HANDLER = CommandHandler("feed", feed)
 POKE_HANDLER = CommandHandler("poke", poke)
-WAIFU_HANDLER = CommandHandler("waifu", waifu)
+HENTAI_HANDLER = CommandHandler("hentai", hentai)
 BAKA_HANDLER = CommandHandler("baka", baka)
 
 
@@ -73,6 +73,6 @@ dispatcher.add_handler(WALLPAPER_HANDLER)
 dispatcher.add_handler(TICKLE_HANDLER)
 dispatcher.add_handler(FEED_HANDLER)
 dispatcher.add_handler(POKE_HANDLER)
-dispatcher.add_handler(WAIFU_HANDLER)
+dispatcher.add_handler(HENTAI_HANDLER)
 dispatcher.add_handler(BAKA_HANDLER)
     

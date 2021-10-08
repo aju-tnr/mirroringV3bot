@@ -33,7 +33,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
         search_url = f"https://otakudesu.moe/?s={search_query}"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
-        search_result = soup.find_all("h2", {'class': "post-title"})
+        search_result = soup.find_all("h2", {'class': "title"})
 
         if search_result:
             result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Otakudesu</code>: \n"
@@ -45,17 +45,17 @@ def site_search(update: Update, context: CallbackContext, site: str):
             more_results = False
             result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Otakudesu</code>"
 
-    elif site == "kayo":
-        search_url = f"https://animekayo.com/?s={search_query}"
+    elif site == "doujindesu":
+        search_url = f"https://doujindesu.id/?s={search_query}"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
         search_result = soup.find_all("h2", {'class': "title"})
 
-        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeKayo</code>: \n"
+        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>DoujinDesu</code>: \n"
         for entry in search_result:
 
             if entry.text.strip() == "Nothing Found":
-                result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeKayo</code>"
+                result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>DoujinDesu</code>"
                 more_results = False
                 break
 
@@ -81,13 +81,13 @@ def otakudesu(update: Update, context: CallbackContext):
     site_search(update, context, "otakudesu")
 
 
-def kayo(update: Update, context: CallbackContext):
-    site_search(update, context, "kayo")
+def doujindesu(update: Update, context: CallbackContext):
+    site_search(update, context, "doujindesu")
     
     
     
 OTAKUDESU_SEARCH_HANDLER = CommandHandler("otakudesu", otakudesu)
-KAYO_SEARCH_HANDLER = CommandHandler("kayo", kayo)
+DOUJINDESU_SEARCH_HANDLER = CommandHandler("doujindesu", doujindesu)
 
 dispatcher.add_handler(OTAKUDESU_SEARCH_HANDLER)
-dispatcher.add_handler(KAYO_SEARCH_HANDLER)
+dispatcher.add_handler(DOUJINDESU_SEARCH_HANDLER)

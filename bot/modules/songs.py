@@ -25,7 +25,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('🔎 mencari lagu...')
+    m = message.reply('🔎 𝑴𝒆𝒏𝒄𝒂𝒓𝒊 𝒎𝒖𝒔𝒊𝒌...')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -48,13 +48,13 @@ def song(client, message):
         )
         print(str(e))
         return
-    m.edit("`Mendownload Lagu... sabar ye😅 `")
+    m.edit("`𝑴𝒆𝒏𝒅𝒐𝒘𝒏𝒍𝒐𝒂𝒅 𝒎𝒖𝒔𝒊𝒌... 𝒔𝒂𝒃𝒂𝒓 𝒚𝒂😅 `")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎙 **Judul**: [{title[:35]}]({link})\n🎬 **Sumber**: YouTube\n⏱️ **Durasi**: `{duration}`\n👁‍🗨 **Ditonton**: `{views}`\n🤖 **By**: @MirroringV3Bot '
+        rep = f'🎙 **𝐉𝐮𝐝𝐮𝐥**: [{title[:35]}]({link})\n🎬 **𝐒𝐮𝐦𝐛𝐞𝐫**: YouTube\n⏱️ **𝐃𝐮𝐫𝐚𝐬𝐢**: `{duration}`\n👁‍🗨 **𝐃𝐢𝐭𝐨𝐧𝐭𝐨𝐧**: `{views}`\n🤖 **𝐁𝐲**: @MirroringV3Bot '
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -62,7 +62,7 @@ def song(client, message):
         message.reply_audio(audio_file, caption=rep, thumb=thumb_name, parse_mode='md', title=title, duration=dur)
         m.delete()
     except Exception as e:
-        m.edit('An error Occured! \nReport at @TangentChats')
+        m.edit('An error Occured! \nReport to @OdierBambi')
         print(e)
 
     try:

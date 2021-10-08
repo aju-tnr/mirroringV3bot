@@ -27,7 +27,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
     try:
         search_query = args[1]
     except IndexError:
-        message.reply_text("Give something to search")
+        message.reply_text("Berikan sesuatu untuk dicari")
         return
 
     if site == "kaizoku":
@@ -37,7 +37,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
         search_result = soup.find_all("h2", {'class': "post-title"})
 
         if search_result:
-            result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>KaizokuAnime</code>: \n"
+            result = f"<b>Hasil Pencarian dari</b> <code>{html.escape(search_query)}</code> <b>DiWeb</b> <code>KaizokuAnime</code>: \n"
             for entry in search_result:
                 post_link = "https://animekaizoku.com/" + entry.a['href']
                 post_name = html.escape(entry.text)
@@ -52,7 +52,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
         soup = bs4.BeautifulSoup(html_text, "html.parser")
         search_result = soup.find_all("h2", {'class': "title"})
 
-        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>DoujinDesu</code>: \n"
+        result = f"<b>Hasil Pencarian dari</b> <code>{html.escape(search_query)}</code> <b>DiWeb</b> <code>DoujinDesu</code>: \n"
         for entry in search_result:
 
             if entry.text.strip() == "Nothing Found":
@@ -70,7 +70,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
         soup = bs4.BeautifulSoup(html_text, "html.parser")
         search_result = soup.find_all("h2", {'class': "title"})
 
-        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Bakadame</code>: \n"
+        result = f"<b>Hasil Pencarian dari</b> <code>{html.escape(search_query)}</code> <b>DiWeb</b> <code>Bakadame</code>: \n"
         for entry in search_result:
 
             if entry.text.strip() == "Nothing Found":
@@ -83,7 +83,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
             result += f"• <a href='{post_link}'>{post_name}</a>\n"
           
 
-    buttons = [[InlineKeyboardButton("See all results", url=search_url)]]
+    buttons = [[InlineKeyboardButton("Lihat semua hasil", url=search_url)]]
 
     if more_results:
         message.reply_text(

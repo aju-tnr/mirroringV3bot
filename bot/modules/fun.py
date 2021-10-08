@@ -83,6 +83,7 @@ def funhelp(update, context):
  ❍ `/shrug`*:* Get shrug XD
  ❍ `/song`*:* Get song from youtube
  ❍ `/table`*:* Get flip/unflip :v
+ ❍ `/quotly`*:* make quotly sticker
  ❍ `/rlg`*:* Join ears,nose,mouth and create an emo ;-;
  ❍ `/weebify <text>`*:* Returns a weebified text
  ❍ `/textbulet <text>`*:* Returns a bulet text

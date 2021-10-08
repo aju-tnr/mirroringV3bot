@@ -77,7 +77,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
             result, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
 
-def kaizoku(update: Update, context: CallbackContext):
+def otakudesu(update: Update, context: CallbackContext):
     site_search(update, context, "otakudesu")
 
 

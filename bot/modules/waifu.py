@@ -20,6 +20,12 @@ def neko(update, context):
     msg = update.effective_message
     target = "neko"
     msg.reply_photo(nekos.img(target))
+
+
+def lewd(update, context):
+    msg = update.effective_message
+    target = "lewd"
+    msg.reply_photo(nekos.img(target))
     
     
 def wallpaper(update, context):
@@ -60,6 +66,7 @@ def baka(update, context):
     
     
 NEKO_HANDLER = CommandHandler("neko", neko)
+LEWD_HANDLER = CommandHandler("lewd", lewd)
 WALLPAPER_HANDLER = CommandHandler("wallpaper", wallpaper)
 TICKLE_HANDLER = CommandHandler("tickle", tickle)
 FEED_HANDLER = CommandHandler("feed", feed)
@@ -69,6 +76,7 @@ BAKA_HANDLER = CommandHandler("baka", baka)
 
 
 dispatcher.add_handler(NEKO_HANDLER)
+dispatcher.add_handler(LEWD_HANDLER)
 dispatcher.add_handler(WALLPAPER_HANDLER)
 dispatcher.add_handler(TICKLE_HANDLER)
 dispatcher.add_handler(FEED_HANDLER)

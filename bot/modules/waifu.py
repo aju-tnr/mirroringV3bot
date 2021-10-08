@@ -49,12 +49,7 @@ def poke(update, context):
 def waifu(update, context):
     msg = update.effective_message
     target = "waifu"
-    with open("temp.png", "wb") as f:
-        f.write(requests.get(nekos.img(target)).content)
-    img = Image.open("temp.png")
-    img.save("temp.webp", "webp")
-    msg.reply_document(open("temp.webp", "rb"))
-    os.remove("temp.webp")
+    msg.reply_photo(nekos.img(target))
     
     
 def baka(update, context):

@@ -471,7 +471,7 @@ TOSS = (
 )
 
 GAMBAR_TITIT = (
-            😋😋
+           "😋😋
             😋😋😋
              😋😋😋
               😋😋😋
@@ -484,7 +484,7 @@ GAMBAR_TITIT = (
               😋😋😋😋
            😋😋😋😋😋😋
         😋😋😋    😋😋😋
-         😋😋       😋😋
+         😋😋       😋😋"
 )
 
 DECIDE = ("Yes.", "No.", "Maybe.", " Ask Devil.","Don't ask me.")

@@ -78,7 +78,7 @@ def table(update: Update, context: CallbackContext):
 
 
 def pisang(update: Update, context: CallbackContext):
-    gambar_titit = random.choice(fun_strings.GAMBAR_TITIT)
+    gambar_titit = choice(fun_strings.GAMBAR_TITIT)
 
 def funhelp(update, context):
     help_string = '''

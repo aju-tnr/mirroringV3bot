@@ -20,7 +20,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('🔎 𝗠𝗲𝗻𝗰𝗮𝗿𝗶 𝗠𝘂𝘀𝗶𝗸...')
+    m = message.reply('🔎 𝕄𝕖𝕟𝕔𝕒𝕣𝕚 𝕃𝕒𝕘𝕦...')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -58,13 +58,13 @@ def song(client, message):
         )
         print(str(e))
         return
-    m.edit("🔎 𝐌𝐞𝐧𝐞𝐦𝐮𝐤𝐚𝐧 𝐥𝐚𝐠𝐮\n⏱️ 𝐌𝐨𝐡𝐨𝐧 𝐭𝐮𝐧𝐠𝐠𝐮 𝐛𝐞𝐛𝐞𝐫𝐚𝐩𝐚 𝐦𝐞𝐧𝐢𝐭 [🗣️](https://telegra.ph/file/3e7470170b897ffef083d.mp4)")
+    m.edit("🔎 𝐌𝐞𝐧𝐞𝐦𝐮𝐤𝐚𝐧 𝐥𝐚𝐠𝐮 \n ⏱️ 𝐌𝐨𝐡𝐨𝐧 𝐭𝐮𝐧𝐠𝐠𝐮 𝐔𝐧𝐭𝐮𝐤 𝐛𝐞𝐛𝐞𝐫𝐚𝐩𝐚 𝐝𝐞𝐭𝐢𝐤 [🗣️](https://telegra.ph/file/0bcdc99a139d0ba59c9b6.mp4)")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎙️ 𝐉𝐮𝐝𝐮𝐥  : [{title[:35]}]({link})\n⏱️ 𝐃𝐮𝐫𝐚𝐭𝐢𝐨𝐧 : `{duration}`\n🎬 𝐒𝐨𝐮𝐫𝐜𝐞 : [Youtube](https://youtu.be/3pN0W4KzzNY)\n👁‍🗨 𝐕𝐢𝐞𝐰𝐬 : `{views}`\n\n💌 𝐁𝐲 : @MirroringV3Bot'
+        rep = f'🎙️ 𝐉𝐮𝐝𝐮𝐥 : [{title[:35]}]({link})\n⏱️ 𝐃𝐮𝐫𝐚𝐬𝐢 : `{duration}`\n🎬 𝐒𝐮𝐦𝐛𝐞𝐫 : [Youtube](https://youtu.be/3pN0W4KzzNY)\n👁‍🗨 𝐃𝐢𝐭𝐨𝐧𝐭𝐨𝐧 : `{views}`\n\n💌 𝐁𝐲 : @MirroringV3Bot'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)

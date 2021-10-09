@@ -470,22 +470,6 @@ TOSS = (
     "Yumeko sent coin to Hell", 
 )
 
-GAMBAR_TITIT = (
-           "😋😋
-            😋😋😋
-             😋😋😋
-              😋😋😋
-                😋😋😋
-                 😋😋😋
-                  😋😋😋
-                  😋😋😋
-                  😋😋😋
-                 😋😋😋
-              😋😋😋😋
-           😋😋😋😋😋😋
-        😋😋😋    😋😋😋
-         😋😋       😋😋"
-)
 
 DECIDE = ("Yes.", "No.", "Maybe.", " Ask Devil.","Don't ask me.")
 

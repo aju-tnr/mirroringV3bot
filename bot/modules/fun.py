@@ -77,8 +77,6 @@ def table(update: Update, context: CallbackContext):
     reply_text(random.choice(fun_strings.TABLE))
 
 
-def pisang(update: Update, context: CallbackContext):
-    gambar_titit = choice(fun_strings.GAMBAR_TITIT)
 
 def funhelp(update, context):
     help_string = '''
@@ -87,7 +85,6 @@ def funhelp(update, context):
  ➻ `/shrug`*:* Get shrug XD
  ➻ `/table`*:* Get flip/unflip :v
  ➻ `/rlg`*:* Join ears,nose,mouth and create an emo ;-;
- ➻ `/pisang`*:* Get emoji pisang
  ➻ `/weebify <text>`*:* Returns a weebified text
  ➻ `/textbulet <text>`*:* Returns a bulet text
   ═ ═ ═ ═ ═ ═ ═ ═ ═ ═
@@ -108,7 +105,6 @@ def funhelp(update, context):
 
 
 RUNS_HANDLER = CommandHandler("runs", runs)
-PISANG_HANDLER = CommandHandler("pisang", pisang)
 TRUTH_HANDLER = CommandHandler("truth", truth)
 DARE_HANDLER = CommandHandler("dare", dare)
 INSULT_HANDLER = CommandHandler("insult", insult)
@@ -131,5 +127,4 @@ dispatcher.add_handler(SHRUG_HANDLER)
 dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
-dispatcher.add_handler(PISANG_HANDLER)
 dispatcher.add_handler(FUNHELP_HANDLER)

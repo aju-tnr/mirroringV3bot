@@ -77,6 +77,9 @@ def table(update: Update, context: CallbackContext):
     reply_text(random.choice(fun_strings.TABLE))
 
 
+def pisang(update: Update, context: CallbackContext):
+    gambar_titi = random.choice(fun_strings.GAMBAR_TITIT)
+
 def funhelp(update, context):
     help_string = '''
   ✙ *𝐍𝐠𝐠𝐚𝐛𝐮𝐭* 👾 *:*
@@ -84,6 +87,7 @@ def funhelp(update, context):
  ➻ `/shrug`*:* Get shrug XD
  ➻ `/table`*:* Get flip/unflip :v
  ➻ `/rlg`*:* Join ears,nose,mouth and create an emo ;-;
+ ➻ `/pisang`*:* Get emoji pisang
  ➻ `/weebify <text>`*:* Returns a weebified text
  ➻ `/textbulet <text>`*:* Returns a bulet text
   ═ ═ ═ ═ ═ ═ ═ ═ ═ ═

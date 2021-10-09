@@ -100,6 +100,8 @@ def funhelp(update, context):
  ➻ `/song`*:* Get song from youtube
  ➻ `/tgm`*:* Upload file to telegraph
  ➻ `/tgt`*:* Upload text to telegraph
+ ➻ `/info`*:* get info from user
+ ➻ `/webss`*:* Upload screenshot from web
  '''
     update.effective_message.reply_photo("https://telegra.ph/file/6b6d2675626aa90f67bce.jpg", help_string, parse_mode=ParseMode.MARKDOWN)
 

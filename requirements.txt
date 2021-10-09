@@ -28,7 +28,7 @@ speedtest-cli
 telegraph
 tenacity
 TgCrypto
-youtube_dl
+git+https://github.com/ytdl-org/youtube-dl
 youtube_search
 youtube-search-python
 nekos.py

@@ -20,7 +20,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('🔎 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐭𝐡𝐞 𝐬𝐨𝐧𝐠...')
+    m = message.reply('🔎 𝗠𝗲𝗻𝗰𝗮𝗿𝗶 𝗠𝘂𝘀𝗶𝗸...')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []

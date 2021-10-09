@@ -20,7 +20,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('🔎 𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐭𝐡𝐞 𝐬𝐨𝐧𝐠...')
+    m = message.reply('🔎 𝕄𝕖𝕟𝕔𝕒𝕣𝕚 𝕃𝕒𝕘𝕦...')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -58,7 +58,7 @@ def song(client, message):
         )
         print(str(e))
         return
-    m.edit("🔎 𝐌𝐞𝐧𝐞𝐦𝐮𝐤𝐚𝐧 𝐥𝐚𝐠𝐮 🎶  𝐌𝐨𝐡𝐨𝐧 𝐭𝐮𝐧𝐠𝐠𝐮⏱️ 𝐔𝐧𝐭𝐮𝐤 𝐛𝐞𝐛𝐞𝐫𝐚𝐩𝐚 𝐝𝐞𝐭𝐢𝐤 [🚀](https://telegra.ph/file/c05ae7b49fcfc78ceeb9e.mp4)")
+    m.edit("🔎 𝐌𝐞𝐧𝐞𝐦𝐮𝐤𝐚𝐧 𝐥𝐚𝐠𝐮   𝐌𝐨𝐡𝐨𝐧 𝐭𝐮𝐧𝐠𝐠𝐮 𝐔𝐧𝐭𝐮𝐤 𝐛𝐞𝐛𝐞𝐫𝐚𝐩𝐚 𝐝𝐞𝐭𝐢𝐤 [⏱️](https://telegra.ph/file/0bcdc99a139d0ba59c9b6.mp4)")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)

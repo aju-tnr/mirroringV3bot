@@ -58,7 +58,7 @@ def song(client, message):
         )
         print(str(e))
         return
-    m.edit("🔎 𝐌𝐞𝐧𝐞𝐦𝐮𝐤𝐚𝐧 𝐥𝐚𝐠𝐮 \n ⏱️ 𝐌𝐨𝐡𝐨𝐧 𝐭𝐮𝐧𝐠𝐠𝐮 𝐔𝐧𝐭𝐮𝐤 𝐛𝐞𝐛𝐞𝐫𝐚𝐩𝐚 𝐝𝐞𝐭𝐢𝐤 [🗣️](https://telegra.ph/file/0bcdc99a139d0ba59c9b6.mp4)")
+    m.edit("🔎𝐌𝐞𝐧𝐞𝐦𝐮𝐤𝐚𝐧 𝐥𝐚𝐠𝐮\n ⏱️𝐌𝐨𝐡𝐨𝐧 𝐭𝐮𝐧𝐠𝐠𝐮 𝐔𝐧𝐭𝐮𝐤 𝐛𝐞𝐛𝐞𝐫𝐚𝐩𝐚 𝐝𝐞𝐭𝐢𝐤 [🗣️](https://telegra.ph/file/0bcdc99a139d0ba59c9b6.mp4)")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)

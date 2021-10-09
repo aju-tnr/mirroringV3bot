@@ -1,11 +1,12 @@
 import os
 import png
+from pyrogram import Client, filters
 from pyqrcode import QRCode
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 from telegram import Update
-from bot import dispatcher
+from bot import app, dispatcher
 
-
+@app.on_message(filters.command(['qr']))
 def qrcode(update: Update, context: CallbackContext):
     text = update.message.text
     message_id = update.message.message_id
@@ -22,6 +23,6 @@ def qrcode(update: Update, context: CallbackContext):
         update.message.reply_text("Please Try Agian Later")
 
 
-QRCODE_HANDLER = CommandHandler("qrcode", qrcode)
+QRCODE_HANDLER = CommandHandler("qr", qrcode)
 
 dispatcher.add_handler(QRCODE_HANDLER)

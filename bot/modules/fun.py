@@ -78,7 +78,7 @@ def table(update: Update, context: CallbackContext):
 
 
 def pisang(update: Update, context: CallbackContext):
-    gambar_titi = random.choice(fun_strings.GAMBAR_TITIT)
+    gambar_titit = random.choice(fun_strings.GAMBAR_TITIT)
 
 def funhelp(update, context):
     help_string = '''
@@ -108,6 +108,7 @@ def funhelp(update, context):
 
 
 RUNS_HANDLER = CommandHandler("runs", runs)
+PISANG_HANDLER = CommandHandler("pisang", pisang)
 TRUTH_HANDLER = CommandHandler("truth", truth)
 DARE_HANDLER = CommandHandler("dare", dare)
 INSULT_HANDLER = CommandHandler("insult", insult)
@@ -130,4 +131,5 @@ dispatcher.add_handler(SHRUG_HANDLER)
 dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
+dispatcher.add_handler(PISANG_HANDLER)
 dispatcher.add_handler(FUNHELP_HANDLER)

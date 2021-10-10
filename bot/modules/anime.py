@@ -274,6 +274,8 @@ def weebhelp(update, context):
 • `/lewd`*:* mengirim foto anu
 • `/tickle`*:* mengirim gif tickle
 • `/feed`*:* mengirim gif feed
+• `/nsfw`*:* mengirim gif nsfw
+• `/slewd`*:* mengirim sticker mantap
 • `/poke`*:* mengirim gif poke
 • `/baka`*:* mengirim gif baka
 • `/bakadame`*:* Cari anime dari bakadame

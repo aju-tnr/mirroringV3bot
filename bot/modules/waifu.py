@@ -62,10 +62,29 @@ def baka(update, context):
     msg = update.effective_message
     target = "baka"
     msg.reply_video(nekos.img(target))
+
+
+def nsfw(update, context):
+    msg = update.effective_message
+    target = "nsfw_neko_gif"
+    msg.reply_video(nekos.img(target))
+
+
+def avatarlewd(update, context):
+    msg = update.effective_message
+    target = "nsfw_avatar"
+    with open("temp.png", "wb") as f:
+        f.write(requests.get(nekos.img(target)).content)
+    img = Image.open("temp.png")
+    img.save("temp.webp", "webp")
+    msg.reply_document(open("temp.webp", "rb"))
+    os.remove("temp.webp")
     
     
     
 NEKO_HANDLER = CommandHandler("neko", neko)
+SLEWD_HANDLER = CommandHandler("slewd", avatarlewd)
+NSFW_HANDLER = CommandHandler("nsfw", nsfw)
 LEWD_HANDLER = CommandHandler("lewd", lewd)
 WALLPAPER_HANDLER = CommandHandler("wallpaper", wallpaper)
 TICKLE_HANDLER = CommandHandler("tickle", tickle)
@@ -76,6 +95,8 @@ BAKA_HANDLER = CommandHandler("baka", baka)
 
 
 dispatcher.add_handler(NEKO_HANDLER)
+dispatcher.add_handler(SLEWD_HANDLER)
+dispatcher.add_handler(NSFW_HANDLER)
 dispatcher.add_handler(LEWD_HANDLER)
 dispatcher.add_handler(WALLPAPER_HANDLER)
 dispatcher.add_handler(TICKLE_HANDLER)
